@@ -1,0 +1,58 @@
+// Anime Expeditions codes — single source of truth.
+// Update this file when new codes drop; the page + schema + FAQ read from here.
+// Codes are milestone-based (visits/likes/ccu), so the next one is predictable.
+
+export interface GameCode {
+  code: string;
+  reward: string;
+  status: "active" | "expired";
+}
+
+// Last verified against live sources. Update on every check.
+export const LAST_VERIFIED = "2026-08-09"; // ISO date, shown as "Last verified"
+export const GAME_VISITS = "573M+"; // live visits, for milestone context
+export const NEXT_MILESTONE_HINT =
+  "Game is past 570M visits — expect a `600mvisits` code when it hits 600M.";
+
+export const codes: GameCode[] = [
+  {
+    code: "500mvisits",
+    reward: "50 Trait Crystals, 30 Equipment Rerolls, 30 Stat Rerolls",
+    status: "active",
+  },
+  // --- expired below ---
+  { code: "AnotherRestart", reward: "Rewards", status: "expired" },
+  { code: "400mvisits", reward: "Trait Crystals + Rerolls", status: "expired" },
+  { code: "200klikes", reward: "Rewards", status: "expired" },
+  { code: "300mvisits", reward: "Rewards", status: "expired" },
+  { code: "300kccu", reward: "Rewards", status: "expired" },
+  { code: "250kccu", reward: "Rewards", status: "expired" },
+  { code: "200mvisits", reward: "Rewards", status: "expired" },
+  { code: "VillainInvasion", reward: "Rewards", status: "expired" },
+  { code: "releasetournamentsorry", reward: "Rewards", status: "expired" },
+  { code: "sorryforlongmaintenance", reward: "Rewards", status: "expired" },
+  { code: "1MGROUP!", reward: "Rewards", status: "expired" },
+  { code: "wfade", reward: "2,500 Gems + Trait Crystals + Rerolls", status: "expired" },
+  { code: "HAPPYBDAYCOOP", reward: "Rewards", status: "expired" },
+  { code: "100K!", reward: "Rewards", status: "expired" },
+  { code: "30KLIKES!", reward: "Rewards", status: "expired" },
+  { code: "EXPEDITIONS", reward: "Rewards", status: "expired" },
+  { code: "AE#1", reward: "Rewards", status: "expired" },
+  { code: "RELEASE", reward: "Rewards", status: "expired" },
+  { code: "WanderingFix", reward: "Rewards", status: "expired" },
+  { code: "EA+", reward: "Rewards", status: "expired" },
+  { code: "EA", reward: "Rewards", status: "expired" },
+  { code: "100mvisits", reward: "Rewards", status: "expired" },
+  { code: "WeekendSurge", reward: "Rewards", status: "expired" },
+  { code: "sorryforguilds", reward: "Rewards", status: "expired" },
+  { code: "SorryForRestart", reward: "Rewards", status: "expired" },
+  { code: "200KCCU", reward: "Rewards", status: "expired" },
+  { code: "SorryForBugs", reward: "Rewards", status: "expired" },
+];
+
+export const activeCodes = codes.filter((c) => c.status === "active");
+export const expiredCodes = codes.filter((c) => c.status === "expired");
+
+// Roblox experience deep-link (rootPlaceId from games API)
+export const ROBLOX_GAME_URL =
+  "https://www.roblox.com/games/84515722934860/Anime-Expeditions";
