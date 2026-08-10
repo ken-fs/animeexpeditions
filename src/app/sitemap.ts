@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // English-only pages (no locale variants yet).
   const enOnly: { path: string; changeFrequency: "weekly" | "monthly"; priority: number }[] = [
+    { path: "/team-builder/", changeFrequency: "monthly", priority: 0.7 },
     { path: "/traits/", changeFrequency: "weekly", priority: 0.7 },
     { path: "/maps/", changeFrequency: "monthly", priority: 0.7 },
     { path: "/updates/", changeFrequency: "weekly", priority: 0.7 },

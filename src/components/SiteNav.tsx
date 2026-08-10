@@ -14,6 +14,7 @@ const LINKS = [
 
 // English-only pages (not yet localized). Shown only when locale === "en".
 const EN_ONLY_LINKS = [
+  { href: "/team-builder/", label: "TEAM" },
   { href: "/traits/", label: "TRAITS" },
   { href: "/maps/", label: "MAPS" },
   { href: "/updates/", label: "UPDATES" },
