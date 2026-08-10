@@ -36,12 +36,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // English-only pages (no locale variants yet).
-  entries.push({
-    url: SITE + "/traits/",
-    lastModified,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  });
+  const enOnly: { path: string; changeFrequency: "weekly" | "monthly"; priority: number }[] = [
+    { path: "/traits/", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/updates/", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/game-modes/", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/about/", changeFrequency: "monthly", priority: 0.3 },
+  ];
+  for (const { path, changeFrequency, priority } of enOnly) {
+    entries.push({ url: SITE + path, lastModified, changeFrequency, priority });
+  }
 
   return entries;
 }
