@@ -15,6 +15,7 @@ const LINKS = [
 // English-only pages (not yet localized). Shown only when locale === "en".
 const EN_ONLY_LINKS = [
   { href: "/traits/", label: "TRAITS" },
+  { href: "/maps/", label: "MAPS" },
   { href: "/updates/", label: "UPDATES" },
   { href: "/game-modes/", label: "MODES" },
 ];

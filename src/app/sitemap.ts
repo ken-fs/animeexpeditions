@@ -38,8 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // English-only pages (no locale variants yet).
   const enOnly: { path: string; changeFrequency: "weekly" | "monthly"; priority: number }[] = [
     { path: "/traits/", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/maps/", changeFrequency: "monthly", priority: 0.7 },
     { path: "/updates/", changeFrequency: "weekly", priority: 0.7 },
     { path: "/game-modes/", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/gamepasses/", changeFrequency: "monthly", priority: 0.6 },
     { path: "/about/", changeFrequency: "monthly", priority: 0.3 },
   ];
   for (const { path, changeFrequency, priority } of enOnly) {
