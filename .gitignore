@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI coding-tool local config (impeccable/plugins) — not part of the site
+/.claude/
+/.codex/
+/.cursor/
+/.impeccable/

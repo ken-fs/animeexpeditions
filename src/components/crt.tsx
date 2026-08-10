@@ -1,0 +1,48 @@
+import type { ReactNode } from "react";
+
+/** A CRT screen panel with phosphor-grid border. */
+export function Panel({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`border-2 border-grid bg-screen-2/40 shadow-[0_0_0_1px_rgba(67,224,232,0.08),0_0_24px_rgba(10,10,40,0.6)] ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+/** Marquee-style section heading in the pixel display face. */
+export function Marquee({
+  children,
+  color = "cyan",
+}: {
+  children: ReactNode;
+  color?: "cyan" | "amber" | "green" | "magenta";
+}) {
+  return (
+    <h2 className={`font-display text-base leading-snug phosphor-${color} sm:text-lg`}>
+      {children}
+    </h2>
+  );
+}
+
+/** Shared cabinet footer disclaimer. */
+export function CabinetFooter() {
+  return (
+    <footer className="mt-16 border-t-2 border-grid pt-6 text-dim">
+      <p className="font-display text-[0.55rem] leading-relaxed">
+        FAN-MADE · NOT AFFILIATED WITH EXPEDITIONS ENTERTAINMENT OR ROBLOX CORP
+      </p>
+      <p className="mt-2">
+        Anime Expeditions Hub is an independent player resource. Game names and
+        assets belong to their owners.
+      </p>
+    </footer>
+  );
+}

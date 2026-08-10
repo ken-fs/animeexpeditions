@@ -4,11 +4,11 @@ import { codesPage } from "@/data/i18n";
 import { hreflangAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: codesPage.en.metaTitle,
-  description: codesPage.en.metaDescription,
-  alternates: hreflangAlternates("/"),
+  title: codesPage.es.metaTitle,
+  description: codesPage.es.metaDescription,
+  alternates: hreflangAlternates("/", "es"),
 };
 
-export default function Home() {
-  return <CodesPageView locale="en" />;
+export default function HomeEs() {
+  return <CodesPageView locale="es" />;
 }

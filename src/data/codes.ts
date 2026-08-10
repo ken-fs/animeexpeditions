@@ -6,9 +6,10 @@ export interface GameCode {
   code: string;
   reward: string;
   status: "active" | "expired";
+  expires?: string; // ISO date, when a still-active code is known to expire
 }
 
-// Last verified against live sources. Update on every check.
+// Last verified against live sources (beebom + tryhardguides, cross-checked). Update on every check.
 export const LAST_VERIFIED = "2026-08-09"; // ISO date, shown as "Last verified"
 export const GAME_VISITS = "573M+"; // live visits, for milestone context
 export const NEXT_MILESTONE_HINT =
@@ -19,6 +20,7 @@ export const codes: GameCode[] = [
     code: "500mvisits",
     reward: "50 Trait Crystals, 30 Equipment Rerolls, 30 Stat Rerolls",
     status: "active",
+    expires: "2026-08-11",
   },
   // --- expired below ---
   { code: "AnotherRestart", reward: "Rewards", status: "expired" },
@@ -37,11 +39,11 @@ export const codes: GameCode[] = [
   { code: "100K!", reward: "Rewards", status: "expired" },
   { code: "30KLIKES!", reward: "Rewards", status: "expired" },
   { code: "EXPEDITIONS", reward: "Rewards", status: "expired" },
-  { code: "AE#1", reward: "Rewards", status: "expired" },
-  { code: "RELEASE", reward: "Rewards", status: "expired" },
+  { code: "AE#1", reward: "5 Equipment Locks, 5 Equipment Rerolls, 5 Stat Locks, 5 Stat Rerolls, 500 Gems", status: "expired" },
+  { code: "RELEASE", reward: "50 Trait Crystals, 2,500 Gems", status: "expired" },
   { code: "WanderingFix", reward: "Rewards", status: "expired" },
-  { code: "EA+", reward: "Rewards", status: "expired" },
-  { code: "EA", reward: "Rewards", status: "expired" },
+  { code: "EA+", reward: "Early-access exclusive rewards", status: "expired" },
+  { code: "EA", reward: "20 Trait Crystals, 2,500 Gems (early-access exclusive)", status: "expired" },
   { code: "100mvisits", reward: "Rewards", status: "expired" },
   { code: "WeekendSurge", reward: "Rewards", status: "expired" },
   { code: "sorryforguilds", reward: "Rewards", status: "expired" },

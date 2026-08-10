@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Anime Expeditions Codes, Tier List and Guides">
+  <defs>
+    <radialGradient id="tube" cx="50%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#1a1a3e"/>
+      <stop offset="60%" stop-color="#0a0a1f"/>
+      <stop offset="100%" stop-color="#05050f"/>
+    </radialGradient>
+    <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="3" fill="#000000" opacity="0.18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#tube)"/>
+  <rect width="1200" height="630" fill="url(#scan)"/>
+
+  <!-- marquee title, pixel-style via bold monospace -->
+  <text x="600" y="220" text-anchor="middle" font-family="'Courier New', monospace" font-size="78" font-weight="700" fill="#ffcf4a" letter-spacing="2" style="paint-order:stroke">ANIME EXPEDITIONS</text>
+  <text x="600" y="330" text-anchor="middle" font-family="'Courier New', monospace" font-size="58" font-weight="700" fill="#43e0e8" letter-spacing="6">★ WORKING CODES ★</text>
+
+  <!-- high-score record row -->
+  <rect x="300" y="392" width="600" height="70" fill="#12122e" stroke="#1e1e44" stroke-width="3"/>
+  <text x="330" y="440" font-family="'Courier New', monospace" font-size="40" font-weight="700" fill="#57f2a0">500mvisits</text>
+  <text x="870" y="438" text-anchor="end" font-family="'Courier New', monospace" font-size="26" fill="#8a8fc7">● ACTIVE</text>
+
+  <!-- status line -->
+  <text x="600" y="530" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" fill="#8a8fc7">TIER LIST · ROSTER · EVOLUTION PLANNER · GUIDE</text>
+  <text x="600" y="575" text-anchor="middle" font-family="'Courier New', monospace" font-size="24" font-weight="700" fill="#ff4fa3">animeexpeditions.dev</text>
+</svg>

@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Arcade CRT phosphor world. Near-black tube, phosphors punch off the black. */
+  --screen: #08090a;        /* tube glass, near-black neutral */
+  --screen-2: #101215;      /* raised panel */
+  --bezel: #030304;         /* cabinet bezel, darkest */
+  --grid: #26292f;          /* phosphor-dust grid lines (neutral, not blue) */
+  --fg: #eef0ee;            /* screen white, faint green cast */
+  --dim: #8b9088;           /* dimmed phosphor text (neutral, not blue) */
+  --cyan: #43e0e8;          /* primary phosphor */
+  --magenta: #ff4fa3;       /* hot accent */
+  --amber: #ffcf4a;         /* high-score gold */
+  --green: #57f2a0;         /* "working / active" phosphor */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-screen: var(--screen);
+  --color-screen-2: var(--screen-2);
+  --color-bezel: var(--bezel);
+  --color-grid: var(--grid);
+  --color-fg: var(--fg);
+  --color-dim: var(--dim);
+  --color-cyan: var(--cyan);
+  --color-magenta: var(--magenta);
+  --color-amber: var(--amber);
+  --color-green: var(--green);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Flat near-black tube + CRT aperture-grille dot mask (no smooth gradient glow). */
+  background-color: var(--screen);
+  background-image:
+    radial-gradient(rgba(120, 130, 125, 0.045) 1px, transparent 1.4px);
+  background-size: 4px 4px;
+  color: var(--fg);
+  font-family: var(--font-body), ui-monospace, monospace;
+  font-size: 1.35rem; /* VT323 runs small; scale up for readable body */
+  line-height: 1.35;
 }
+
+/* Scanline + vignette overlay across the whole screen. */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.16) 3px,
+    rgba(0, 0, 0, 0.16) 4px
+  );
+  mix-blend-mode: multiply;
+}
+.crt::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  pointer-events: none;
+  /* subtle corner darkening only — not a glow halo */
+  background: radial-gradient(130% 120% at 50% 50%, transparent 82%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+/* Pixel display face needs manual glow + tracking. */
+.phosphor-cyan { color: var(--cyan); text-shadow: 0 0 8px rgba(67, 224, 232, 0.55); }
+.phosphor-amber { color: var(--amber); text-shadow: 0 0 8px rgba(255, 207, 74, 0.5); }
+.phosphor-green { color: var(--green); text-shadow: 0 0 8px rgba(87, 242, 160, 0.5); }
+.phosphor-magenta { color: var(--magenta); text-shadow: 0 0 8px rgba(255, 79, 163, 0.5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .blink { animation: none !important; }
+}
+@keyframes blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0.25; }
+}
+.blink { animation: blink 1.1s steps(1) infinite; }
