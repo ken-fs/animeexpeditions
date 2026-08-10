@@ -4,11 +4,11 @@ import { plannerGuide } from "@/data/i18n";
 import { hreflangAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: plannerGuide.en.planMetaTitle,
-  description: plannerGuide.en.planMetaDesc,
-  alternates: hreflangAlternates("/evolution-planner/"),
+  title: plannerGuide.pt.planMetaTitle,
+  description: plannerGuide.pt.planMetaDesc,
+  alternates: hreflangAlternates("/evolution-planner/", "pt"),
 };
 
-export default function EvolutionPlannerPage() {
-  return <PlannerView locale="en" />;
+export default function Plannerpt() {
+  return <PlannerView locale="pt" />;
 }

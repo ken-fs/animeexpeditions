@@ -4,11 +4,11 @@ import { plannerGuide } from "@/data/i18n";
 import { hreflangAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: plannerGuide.en.guideMetaTitle,
-  description: plannerGuide.en.guideMetaDesc,
-  alternates: hreflangAlternates("/beginner-guide/"),
+  title: plannerGuide.es.guideMetaTitle,
+  description: plannerGuide.es.guideMetaDesc,
+  alternates: hreflangAlternates("/beginner-guide/", "es"),
 };
 
-export default function BeginnerGuide() {
-  return <GuideView locale="en" />;
+export default function Guidees() {
+  return <GuideView locale="es" />;
 }
