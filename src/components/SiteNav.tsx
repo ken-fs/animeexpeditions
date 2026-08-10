@@ -12,6 +12,9 @@ const LINKS = [
   { href: "/beginner-guide/", label: "GUIDE" },
 ];
 
+// English-only pages (not yet localized). Shown only when locale === "en".
+const EN_ONLY_LINKS = [{ href: "/traits/", label: "TRAITS" }];
+
 function currentLocale(pathname: string): Locale {
   const seg = pathname.split("/").filter(Boolean)[0];
   return (LOCALES as readonly string[]).includes(seg) ? (seg as Locale) : "en";
@@ -29,7 +32,7 @@ export function SiteNav() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-display text-[0.6rem]">
-          {LINKS.map((l) => (
+          {[...LINKS, ...(locale === "en" ? EN_ONLY_LINKS : [])].map((l) => (
             <Link
               key={l.href}
               href={l.href}

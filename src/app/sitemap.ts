@@ -35,5 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // English-only pages (no locale variants yet).
+  entries.push({
+    url: SITE + "/traits/",
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  });
+
   return entries;
 }
