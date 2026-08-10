@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CodeCard } from "@/components/CodeCard";
 import { Panel, Marquee } from "@/components/crt";
+import { GameMedia } from "@/components/GameMedia";
 import { activeCodes, expiredCodes, LAST_VERIFIED, GAME_VISITS, ROBLOX_GAME_URL } from "@/data/codes";
 import { codesPage, type Locale } from "@/data/i18n";
 
@@ -94,6 +95,9 @@ export function CodesPageView({ locale }: { locale: Locale }) {
             {t.playCta}
           </a>
         </section>
+
+        {/* Official game media — Roblox screenshots + YouTube trailer */}
+        <GameMedia screenshotsTitle={t.screenshotsTitle} trailerTitle={t.trailerTitle} />
 
         {/* Expired */}
         <section className="mt-14">

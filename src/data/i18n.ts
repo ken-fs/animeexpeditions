@@ -169,6 +169,8 @@ type CodesStrings = {
   playCta: string; // "▶ PLAY ON ROBLOX"
   expiredTitle: string; // "EXPIRED — GAME OVER"
   expiredBody: string;
+  screenshotsTitle: string; // "GAME SCREENSHOTS"
+  trailerTitle: string; // "OFFICIAL TRAILER"
   faqTitle: string;
   faq: { q: string; a: string }[];
   menu: { ranking: string; roster: string; planner: string; rankingSub: string; rosterSub: string; plannerSub: string };
@@ -207,6 +209,8 @@ export const codesPage: Record<Locale, CodesStrings> = {
     playCta: "▶ PLAY ON ROBLOX",
     expiredTitle: "EXPIRED — GAME OVER",
     expiredBody: "Dead codes, kept so you don't waste a turn trying them.",
+    screenshotsTitle: "GAME SCREENSHOTS",
+    trailerTitle: "OFFICIAL TRAILER",
     faqTitle: "FAQ",
     faq: [
       {
@@ -265,6 +269,8 @@ export const codesPage: Record<Locale, CodesStrings> = {
     playCta: "▶ JUGAR EN ROBLOX",
     expiredTitle: "CADUCADOS — GAME OVER",
     expiredBody: "Códigos muertos, aquí para que no pierdas el tiempo probándolos.",
+    screenshotsTitle: "CAPTURAS DEL JUEGO",
+    trailerTitle: "TRÁILER OFICIAL",
     faqTitle: "PREGUNTAS FRECUENTES",
     faq: [
       {
@@ -323,6 +329,8 @@ export const codesPage: Record<Locale, CodesStrings> = {
     playCta: "▶ JOGAR NO ROBLOX",
     expiredTitle: "EXPIRADOS — GAME OVER",
     expiredBody: "Códigos mortos, aqui para você não perder tempo tentando.",
+    screenshotsTitle: "CAPTURAS DO JOGO",
+    trailerTitle: "TRAILER OFICIAL",
     faqTitle: "PERGUNTAS FREQUENTES",
     faq: [
       {
@@ -381,6 +389,8 @@ export const codesPage: Record<Locale, CodesStrings> = {
     playCta: "▶ ИГРАТЬ В ROBLOX",
     expiredTitle: "ИСТЁКШИЕ — GAME OVER",
     expiredBody: "Мёртвые коды — оставлены, чтобы вы не тратили на них время.",
+    screenshotsTitle: "СКРИНШОТЫ ИГРЫ",
+    trailerTitle: "ОФИЦИАЛЬНЫЙ ТРЕЙЛЕР",
     faqTitle: "ВОПРОСЫ И ОТВЕТЫ",
     faq: [
       {
