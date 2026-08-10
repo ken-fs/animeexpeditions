@@ -19,8 +19,24 @@ export function GameMedia({
   screenshotsTitle: string;
   trailerTitle: string;
 }) {
+  const videoJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: "Anime Expeditions Official Trailer",
+    description:
+      "Official gameplay trailer for Anime Expeditions, the anime tower-defense experience on Roblox.",
+    thumbnailUrl: `https://i.ytimg.com/vi/${TRAILER_ID}/maxresdefault.jpg`,
+    uploadDate: "2026-07-01",
+    embedUrl: `https://www.youtube-nocookie.com/embed/${TRAILER_ID}`,
+    contentUrl: `https://www.youtube.com/watch?v=${TRAILER_ID}`,
+  };
+
   return (
     <section className="mt-14">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
+      />
       <Marquee color="amber">{screenshotsTitle}</Marquee>
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
         {PROMO_SHOTS.map((shot) => (

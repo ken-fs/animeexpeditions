@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Panel, CabinetFooter } from "@/components/crt";
-import { TIER_ORDER, unitsByTier, UNITS_VERIFIED, type Tier } from "@/data/units";
+import { units, TIER_ORDER, unitsByTier, UNITS_VERIFIED, type Tier } from "@/data/units";
 import { tierUnits, intlLocale, localePath, type Locale } from "@/data/i18n";
 
 const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
@@ -18,8 +18,23 @@ export function UnitsView({ locale }: { locale: Locale }) {
     day: "numeric",
   });
 
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Anime Expeditions Unit Roster",
+    itemListElement: units.map((u, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: u.name,
+    })),
+  };
+
   return (
     <main className="mx-auto w-full max-w-4xl px-5 py-10 sm:py-14">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <header className="text-center">
         <h1 className="font-display text-xl leading-relaxed phosphor-cyan sm:text-3xl sm:leading-relaxed">
           {t.unitsH1}
