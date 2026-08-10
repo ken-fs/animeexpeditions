@@ -45,3 +45,4 @@ next-env.d.ts
 /.codex/
 /.cursor/
 /.impeccable/
+pnpm-workspace.yaml
