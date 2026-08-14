@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anime Expeditions companion site
 
-## Getting Started
+A fan-made companion site for the Roblox game **Anime Expeditions** — **[animeexpeditions.dev](https://animeexpeditions.dev)**
 
-First, run the development server:
+It gives players the reference data and tools they need outside the game, fast and copy-pasteable: current working redeem codes, a unit tier list, a units roster with evolutions, an interactive evolution-materials planner, a team builder, and guides.
+
+> **Not affiliated** with Expeditions Entertainment or Roblox Corporation. This is an independent fan project. All game data (codes, units, tiers, materials) is real and verifiable — unknowns are marked "check in-game", never invented.
+
+## Pages
+
+**Multilingual** — English (root) plus Español, Português, and Русский:
+
+- **Codes** (home) — current working redeem codes, with verified dates
+- **Tier list** — which units are strong right now
+- **Units** — roster with roles and evolution items
+- **Evolution planner** — interactive: plan materials to farm across several units
+- **Beginner guide** — the optimal early game
+
+**English-only** (content): Traits · Updates · Game modes · Maps · Gamepasses · About
+**English-only** (interactive tools): Team builder · Daily checklist
+
+## Data
+
+All game content lives in single-source-of-truth files under `src/data/` — `codes.ts`, `units.ts`, `traits.ts`, `gameModes.ts`, `gamepasses.ts`, `updates.ts`, `maps.ts`, `checklist.ts`, and translations in `i18n.ts`. Codes and tier data change with game updates; edit the data file, not the pages. Every time-sensitive fact carries its verified date.
+
+## Tech stack
+
+- **Next.js 16** (App Router) + **React 19** + **TypeScript**
+- **Tailwind CSS 4**
+- Static export (`output: export`), deployed to **Cloudflare Workers** (`./out` as static assets, config in `wrangler.jsonc`)
+
+## Development
+
+Uses **npm** — not pnpm. (pnpm triggers an `unrs-resolver` build-script error here.)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static export to out/
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After changing the route structure, run `rm -rf .next` before building — Next 16 caches the old typed-route paths.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed on Cloudflare. Pushing to `main` triggers an automatic build and deploy — no manual build step needed after committing.
