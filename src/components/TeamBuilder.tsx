@@ -6,6 +6,8 @@ import { units, TIER_ORDER, unitsByTier, type Tier } from "@/data/units";
 const MAX_TEAM = 6;
 
 const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
+  SS: "amber",
+  "S+": "amber",
   S: "amber",
   A: "cyan",
   B: "green",
@@ -57,7 +59,7 @@ export function TeamBuilder() {
     <div className="grid gap-8 lg:grid-cols-[1fr_20rem]">
       {/* Picker */}
       <div className="space-y-6">
-        {TIER_ORDER.map((tier) => (
+        {TIER_ORDER.filter((tier) => unitsByTier(tier).length > 0).map((tier) => (
           <fieldset key={tier}>
             <legend className={`mb-2 font-display text-[0.55rem] phosphor-${TIER_PHOSPHOR[tier]}`}>
               {tier} TIER

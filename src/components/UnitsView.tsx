@@ -4,6 +4,8 @@ import { units, TIER_ORDER, unitsByTier, UNITS_VERIFIED, type Tier } from "@/dat
 import { tierUnits, intlLocale, localePath, type Locale } from "@/data/i18n";
 
 const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
+  SS: "amber",
+  "S+": "amber",
   S: "amber",
   A: "cyan",
   B: "green",
@@ -46,7 +48,7 @@ export function UnitsView({ locale }: { locale: Locale }) {
       </header>
 
       <div className="mt-10 space-y-8">
-        {TIER_ORDER.map((tier) => (
+        {TIER_ORDER.filter((tier) => unitsByTier(tier).length > 0).map((tier) => (
           <section key={tier}>
             <div className="mb-4 flex items-center gap-3">
               <span className={`font-display text-lg phosphor-${TIER_PHOSPHOR[tier]}`}>

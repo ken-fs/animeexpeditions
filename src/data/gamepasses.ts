@@ -3,7 +3,9 @@
 // EMPTY in the official API, so effects below are community-reported and flagged.
 // Regional/managed pricing can change the checkout price. Snapshot: 2026-07-18.
 
-export const GAMEPASSES_VERIFIED = "2026-08-10";
+// 2026-08-22: re-verified against Roblox game-passes API (universe 7613921865) —
+// the 3 for-sale passes and prices below still match; effects remain unpublished.
+export const GAMEPASSES_VERIFIED = "2026-08-22";
 
 export interface Gamepass {
   name: string;

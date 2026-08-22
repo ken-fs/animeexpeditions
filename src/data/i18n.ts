@@ -41,7 +41,7 @@ type TierUnitsStrings = {
   base: string;
   role: string;
   evolve: string;
-  tierLabels: { S: string; A: string; B: string; Watch: string };
+  tierLabels: { SS: string; "S+": string; S: string; A: string; B: string; Watch: string };
   // cross-link sentence pieces
   seeRosterPre: string; // "Want each unit's evolution and materials? Open the "
   rosterLink: string; // "unit roster"
@@ -68,7 +68,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "BASE",
     role: "ROLE",
     evolve: "EVOLVE",
-    tierLabels: { S: "S TIER — BEST IN SLOT", A: "A TIER — STRONG PICKS", B: "B TIER — SITUATIONAL", Watch: "WATCH — PROMISING, UNPROVEN" },
+    tierLabels: { SS: "SS TIER — TOP OF THE META", "S+": "S+ TIER — NEAR BEST IN SLOT", S: "S TIER — BEST IN SLOT", A: "A TIER — STRONG PICKS", B: "B TIER — SITUATIONAL", Watch: "WATCH — PROMISING, UNPROVEN" },
     seeRosterPre: "Want each unit's evolution and materials? Open the ",
     rosterLink: "unit roster",
     seeRosterMid: ". Chasing rewards to level them? Grab the latest ",
@@ -92,7 +92,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "BASE",
     role: "ROL",
     evolve: "EVOLUCIÓN",
-    tierLabels: { S: "TIER S — LO MEJOR", A: "TIER A — FUERTES", B: "TIER B — SITUACIONALES", Watch: "WATCH — PROMETEDORAS" },
+    tierLabels: { SS: "TIER SS — LO MÁS ALTO", "S+": "TIER S+ — CASI LO MEJOR", S: "TIER S — LO MEJOR", A: "TIER A — FUERTES", B: "TIER B — SITUACIONALES", Watch: "WATCH — PROMETEDORAS" },
     seeRosterPre: "¿Quieres la evolución y los materiales de cada unidad? Abre la ",
     rosterLink: "lista de unidades",
     seeRosterMid: ". ¿Buscas recompensas para subirlas? Consigue los últimos ",
@@ -116,7 +116,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "BASE",
     role: "FUNÇÃO",
     evolve: "EVOLUÇÃO",
-    tierLabels: { S: "TIER S — OS MELHORES", A: "TIER A — FORTES", B: "TIER B — SITUACIONAIS", Watch: "WATCH — PROMISSORAS" },
+    tierLabels: { SS: "TIER SS — O TOPO", "S+": "TIER S+ — QUASE OS MELHORES", S: "TIER S — OS MELHORES", A: "TIER A — FORTES", B: "TIER B — SITUACIONAIS", Watch: "WATCH — PROMISSORAS" },
     seeRosterPre: "Quer a evolução e os materiais de cada unidade? Abra a ",
     rosterLink: "lista de unidades",
     seeRosterMid: ". Buscando recompensas para upar? Pegue os últimos ",
@@ -140,7 +140,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "БАЗА",
     role: "РОЛЬ",
     evolve: "ЭВОЛЮЦИЯ",
-    tierLabels: { S: "ТИР S — ЛУЧШИЕ", A: "ТИР A — СИЛЬНЫЕ", B: "ТИР B — СИТУАТИВНЫЕ", Watch: "WATCH — ПЕРСПЕКТИВНЫЕ" },
+    tierLabels: { SS: "ТИР SS — ВЕРШИНА МЕТЫ", "S+": "ТИР S+ — ПОЧТИ ЛУЧШИЕ", S: "ТИР S — ЛУЧШИЕ", A: "ТИР A — СИЛЬНЫЕ", B: "ТИР B — СИТУАТИВНЫЕ", Watch: "WATCH — ПЕРСПЕКТИВНЫЕ" },
     seeRosterPre: "Нужны эволюции и материалы каждого юнита? Откройте ",
     rosterLink: "список юнитов",
     seeRosterMid: ". Нужны награды для прокачки? Берите свежие ",
