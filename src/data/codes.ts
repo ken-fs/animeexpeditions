@@ -10,38 +10,46 @@ export interface GameCode {
 }
 
 // Last verified against live sources (beebom + tryhardguides, cross-checked). Update on every check.
-export const LAST_VERIFIED = "2026-08-13"; // ISO date, shown as "Last verified"
-export const GAME_VISITS = "573M+"; // live visits, for milestone context
+export const LAST_VERIFIED = "2026-08-22"; // ISO date, shown as "Last verified"
+export const GAME_VISITS = "720M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
 export const NEXT_MILESTONE_HINT =
-  "Game is past 570M visits — expect a `600mvisits` code when it hits 600M.";
+  "Game is past 700M visits — expect an `800mvisits` code when it hits 800M.";
 
 export const codes: GameCode[] = [
   {
+    // Milestone code for 700M visits. Reward per Beebom (2026-08-20);
+    // TryHardGuides lists it as active but only as generic "Freebies".
+    code: "700mvisits",
+    reward: "50 Trait Crystals, 30 Equipment Rerolls, 30 Stat Rerolls",
+    status: "active",
+  },
+  // --- expired below ---
+  // 2026-08-22: the previous five actives all rolled to expired per beebom + tryhardguides.
+  {
     code: "sorry4longmaintenance",
     reward: "250 Trait Crystals, 25 Stat Locks, 25 Stat Rerolls",
-    status: "active",
+    status: "expired",
   },
   {
     code: "warriorsaga",
     reward: "25 Trait Crystals, 25 Equipment Rerolls, 25 Stat Locks",
-    status: "active",
+    status: "expired",
   },
   {
     code: "update1",
     reward: "100 Trait Crystals, 25 Equipment Rerolls, 25 Equipment Locks, 25 Stat Rerolls",
-    status: "active",
+    status: "expired",
   },
   {
     code: "ballin!",
     reward: "25 Trait Crystals, 10 Equipment Rerolls, 10 Stat Rerolls",
-    status: "active",
+    status: "expired",
   },
   {
     code: "2.5mgroup!",
     reward: "50 Trait Crystals, 25 Equipment Rerolls, 25 Stat Locks, 25 Stat Rerolls",
-    status: "active",
+    status: "expired",
   },
-  // --- expired below ---
   {
     code: "500mvisits",
     reward: "50 Trait Crystals, 30 Equipment Rerolls, 30 Stat Rerolls",
