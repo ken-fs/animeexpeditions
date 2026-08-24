@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Script from "next/script";
 import { Press_Start_2P, VT323 } from "next/font/google";
 import "@/app/globals.css";
 import { SiteNav } from "@/components/SiteNav";
@@ -29,6 +30,21 @@ export function RootShell({
       lang={lang}
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-H6P0ENPRHD"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H6P0ENPRHD');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col crt">
         <div className="scanlines" aria-hidden="true" />
         <SiteNav />
