@@ -4,7 +4,7 @@
 // Add the newest update at the TOP as new patches drop — this is the site's
 // main freshness signal, so keep dates accurate.
 
-export const UPDATES_VERIFIED = "2026-08-10";
+export const UPDATES_VERIFIED = "2026-08-31";
 
 export interface GameUpdate {
   version: string; // e.g. "Update 1.0"
@@ -16,12 +16,27 @@ export interface GameUpdate {
 
 export const updates: GameUpdate[] = [
   {
+    version: "Update 2.0",
+    title: "Summer",
+    date: "Teased Aug 18, 2026 — release window unannounced",
+    status: "provisional",
+    highlights: [
+      "Official Roblox event listing UPDATE 2.0 [SUMMER] promises new content and units; the posted dates are marked unofficial.",
+      "First sneak posted on the official X account (@ExpeditionsRBLX) on Aug 18, 2026.",
+      "No changelog, units, or mode details confirmed yet.",
+    ],
+  },
+  {
     version: "Update 1.0",
+    title: "Warrior Saga",
     date: "Aug 7 – Aug 21, 2026 (event window)",
     status: "provisional",
     highlights: [
-      "Scheduled via the official Roblox events API for Aug 7 4:00 PM UTC to Aug 21 4:00 PM UTC.",
-      "Verified schedule only — no changelog, units, modes, or balance details confirmed yet.",
+      "Warrior Saga content playable from Aug 10 per the official X account; window verified via the official Roblox events API.",
+      "Rotating events (reported): Dragon's Wish — collect 7 Wish Orbs for an exclusive mount — plus Boss Bounty, Guess That Unit!, M.A.S.T.R.R.: Beyond Pain, and Ballin' Traits, most running until Update 2.0 lands.",
+      "Later rotations: Elemental Weather + Wandering Trader (Aug 12), Banner Blitz + Weekend Surge (Aug 13), Forge Fever + Shiny Overflow (Aug 16).",
+      "New Warrior Saga units are folded into the units page and tier list.",
+      "Patch code `patch1.0` (100 Trait Crystals) dropped with the update and has since expired.",
     ],
   },
   {

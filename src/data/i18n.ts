@@ -159,6 +159,7 @@ type CodesStrings = {
   visits: string; // "VISITS"
   boardTitle: string; // "WORKING CODES"
   activeSuffix: string; // "ACTIVE"
+  noActive: string; // shown when zero codes are active
   expiresPrefix: string; // "EXPIRES"
   gotIt: string;
   copy: string;
@@ -192,12 +193,13 @@ export const codesPage: Record<Locale, CodesStrings> = {
     visits: "VISITS",
     boardTitle: "WORKING CODES",
     activeSuffix: "ACTIVE",
+    noActive: "NO WORKING CODES RIGHT NOW — the board refreshes the moment a new one drops.",
     expiresPrefix: "EXPIRES",
     gotIt: "GOT IT",
     copy: "COPY",
     nextUp: "NEXT UP:",
     nextUpBody:
-      "expect a 600mvisits code at the 600M milestone. We forecast codes from visit, like and CCU thresholds.",
+      "Update 2.0 [Summer] is officially teased and the next visit milestone is 800M — both are prime spots for new codes.",
     howTitle: "HOW TO REDEEM",
     steps: [
       "Open Anime Expeditions on Roblox.",
@@ -223,7 +225,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "When do new Anime Expeditions codes come out?",
-        a: "New codes are usually released at visit, like, and concurrent-player milestones. The game is past 570M visits, so a 600mvisits code is expected when it reaches 600 million visits.",
+        a: "New codes usually land at visit, like, and concurrent-player milestones, or with big updates. The game is past 700M visits (600mvisits came and expired) and Update 2.0 is teased — watch for an 800mvisits code or update drop codes.",
       },
     ],
     menu: {
@@ -252,12 +254,13 @@ export const codesPage: Record<Locale, CodesStrings> = {
     visits: "VISITAS",
     boardTitle: "CÓDIGOS ACTIVOS",
     activeSuffix: "ACTIVOS",
+    noActive: "NO HAY CÓDIGOS ACTIVOS AHORA MISMO — el tablero se actualiza en cuanto salga uno nuevo.",
     expiresPrefix: "CADUCA",
     gotIt: "¡LISTO!",
     copy: "COPIAR",
     nextUp: "PRÓXIMO:",
     nextUpBody:
-      "espera un código 600mvisits al llegar al hito de 600M. Predecimos los códigos según los hitos de visitas, likes y jugadores conectados.",
+      "Update 2.0 [Summer] está oficialmente anunciada y el próximo hito de visitas es 800M — ambos son momentos clave para nuevos códigos.",
     howTitle: "CÓMO CANJEAR",
     steps: [
       "Abre Anime Expeditions en Roblox.",
@@ -283,7 +286,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "¿Cuándo salen nuevos códigos de Anime Expeditions?",
-        a: "Los códigos suelen salir en hitos de visitas, likes y jugadores conectados. El juego supera los 570M de visitas, así que se espera un código 600mvisits al alcanzar los 600 millones.",
+        a: "Los códigos suelen salir en hitos de visitas, likes y jugadores conectados, o con grandes actualizaciones. El juego supera los 700M de visitas (600mvisits llegó y caducó) y Update 2.0 está anunciada — atento a un código 800mvisits o a códigos de la actualización.",
       },
     ],
     menu: {
@@ -312,12 +315,13 @@ export const codesPage: Record<Locale, CodesStrings> = {
     visits: "VISITAS",
     boardTitle: "CÓDIGOS ATIVOS",
     activeSuffix: "ATIVOS",
+    noActive: "NENHUM CÓDIGO ATIVO NO MOMENTO — o painel atualiza assim que sair um novo.",
     expiresPrefix: "EXPIRA",
     gotIt: "PRONTO!",
     copy: "COPIAR",
     nextUp: "A SEGUIR:",
     nextUpBody:
-      "espere um código 600mvisits ao atingir a marca de 600M. Prevemos os códigos pelas metas de visitas, likes e jogadores online.",
+      "Update 2.0 [Summer] está oficialmente anunciada e a próxima meta de visitas é 800M — ambas são ótimas chances de códigos novos.",
     howTitle: "COMO RESGATAR",
     steps: [
       "Abra Anime Expeditions no Roblox.",
@@ -343,7 +347,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "Quando saem novos códigos de Anime Expeditions?",
-        a: "Os códigos costumam sair em metas de visitas, likes e jogadores online. O jogo passou de 570M de visitas, então espera-se um código 600mvisits ao chegar a 600 milhões.",
+        a: "Os códigos costumam sair em metas de visitas, likes e jogadores online, ou com grandes atualizações. O jogo passou de 700M de visitas (600mvisits veio e expirou) e Update 2.0 está anunciada — fique de olho em um código 800mvisits ou em códigos da atualização.",
       },
     ],
     menu: {
@@ -372,12 +376,13 @@ export const codesPage: Record<Locale, CodesStrings> = {
     visits: "ВИЗИТОВ",
     boardTitle: "РАБОЧИЕ КОДЫ",
     activeSuffix: "АКТИВНЫХ",
+    noActive: "СЕЙЧАС РАБОЧИХ КОДОВ НЕТ — доска обновится, как только выйдет новый.",
     expiresPrefix: "ИСТЕКАЕТ",
     gotIt: "ГОТОВО",
     copy: "КОПИЯ",
     nextUp: "ДАЛЕЕ:",
     nextUpBody:
-      "ждите код 600mvisits на отметке 600M. Мы прогнозируем коды по порогам визитов, лайков и онлайна.",
+      "Update 2.0 [Summer] официально анонсирована, а следующая отметка визитов — 800M. Оба события — лучшее время для новых кодов.",
     howTitle: "КАК АКТИВИРОВАТЬ",
     steps: [
       "Откройте Anime Expeditions в Roblox.",
@@ -403,7 +408,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "Когда выходят новые коды Anime Expeditions?",
-        a: "Коды обычно выходят на отметках по визитам, лайкам и онлайну. У игры уже больше 570M визитов, поэтому код 600mvisits ждём на отметке 600 миллионов.",
+        a: "Коды обычно выходят на отметках по визитам, лайкам и онлайну или с крупными обновлениями. У игры уже больше 700M визитов (код 600mvisits выходил и истёк), а Update 2.0 анонсирована — ждём код 800mvisits или коды к обновлению.",
       },
     ],
     menu: {

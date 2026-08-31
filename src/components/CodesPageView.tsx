@@ -65,6 +65,9 @@ export function CodesPageView({ locale }: { locale: Locale }) {
                 dateLocale={locale}
               />
             ))}
+            {activeCodes.length === 0 && (
+              <p className="px-4 py-6 font-display text-[0.6rem] text-dim">{t.noActive}</p>
+            )}
           </div>
         </Panel>
 
