@@ -465,6 +465,8 @@ type PlannerGuideStrings = {
   summonsBody1: string;
   ratesPanel: string; // "Rates panel"
   summonsBody2: string;
+  economyTitle: string; // "UPDATE 2.0 ECONOMY"
+  economyBody: string[];
   faqTitle: string;
   faq: { q: string; a: string }[];
   guideCrossPre: string;
@@ -528,6 +530,13 @@ export const plannerGuide: Record<Locale, PlannerGuideStrings> = {
     summonsBody1: "Anime Expeditions combines banner summons with wave-based tower defense. Spend free Beginner Banner tickets before any Gems, and open the in-game ",
     ratesPanel: "Rates panel",
     summonsBody2: " to check the current pool and pity before you pull. Stop summoning once your team covers opening waves, grouped enemies, and bosses.",
+    economyTitle: "UPDATE 2.0 ECONOMY — SAND DOLLARS & FISHING",
+    economyBody: [
+      "Sand Dollars are the Summer Siege event currency — earn them from Tidal Siege waves, event quests, log-in rewards, and fishing.",
+      "Spend them in the event shop: Summer Capsules (100 each, 10 for 1,000) hold limited units, and the new units' evolution items cost 10,000 each — budget before you pull.",
+      "Fishing is free side income: catches, Sand Dollars, and milestone rewards for casting in any pool. The Advanced Rod (750 Sand Dollars) is the best first purchase.",
+      "Event-limited: capsules and shop items leave when Summer Siege ends. Buy the evolution items for any unit you plan to build before that happens.",
+    ],
     faqTitle: "FAQ",
     faq: [
       { q: "How does the summon pity system work?", a: "Anime Expeditions uses a pity system on its banners, but the exact thresholds rotate with each banner. Always open the in-game Rates panel to see the current pool and pity count before spending Gems." },
@@ -593,6 +602,13 @@ export const plannerGuide: Record<Locale, PlannerGuideStrings> = {
     summonsBody1: "Anime Expeditions combina invocaciones por banner con tower defense por oleadas. Usa los tickets gratis de Beginner Banner antes que los Gems, y abre el ",
     ratesPanel: "panel de Rates",
     summonsBody2: " en el juego para ver el pool actual y la pity antes de tirar. Deja de invocar cuando tu equipo cubra oleadas iniciales, enemigos agrupados y jefes.",
+    economyTitle: "ECONOMÍA DE UPDATE 2.0 — SAND DOLLARS Y PESCA",
+    economyBody: [
+      "Los Sand Dollars son la moneda del evento Summer Siege — gánalos en oleadas de Tidal Siege, misiones del evento, recompensas de inicio de sesión y pescando.",
+      "Gástalos en la tienda del evento: las Summer Capsules (100 cada una, 10 por 1,000) contienen unidades limitadas, y los objetos de evolución de las nuevas unidades cuestan 10,000 cada uno — haz presupuesto antes de tirar.",
+      "La pesca es un ingreso extra gratis: capturas, Sand Dollars y recompensas de hitos por lanzar la caña en cualquier charco. La Advanced Rod (750 Sand Dollars) es la mejor primera compra.",
+      "Es limitado: las cápsulas y los objetos de la tienda se van cuando termine Summer Siege. Compra los objetos de evolución de cualquier unidad que planees armar antes de que pase.",
+    ],
     faqTitle: "PREGUNTAS FRECUENTES",
     faq: [
       { q: "¿Cómo funciona el sistema de pity de invocación?", a: "Anime Expeditions usa un sistema de pity en sus banners, pero los umbrales exactos cambian con cada banner. Abre siempre el panel de Rates en el juego para ver el pool actual y el contador de pity antes de gastar Gems." },
@@ -658,6 +674,13 @@ export const plannerGuide: Record<Locale, PlannerGuideStrings> = {
     summonsBody1: "Anime Expeditions combina invocações por banner com tower defense por ondas. Use os tickets grátis de Beginner Banner antes dos Gems, e abra o ",
     ratesPanel: "painel de Rates",
     summonsBody2: " no jogo para ver o pool atual e a pity antes de puxar. Pare de invocar quando seu time cobrir ondas iniciais, inimigos agrupados e chefes.",
+    economyTitle: "ECONOMIA DA UPDATE 2.0 — SAND DOLLARS E PESCA",
+    economyBody: [
+      "Sand Dollars são a moeda do evento Summer Siege — ganhe em ondas do Tidal Siege, missões do evento, recompensas de login e pescando.",
+      "Gaste na loja do evento: Summer Capsules (100 cada, 10 por 1.000) têm unidades limitadas, e os itens de evolução das novas unidades custam 10.000 cada — faça um orçamento antes de puxar.",
+      "A pesca é uma renda extra grátis: capturas, Sand Dollars e recompensas de marcos por lançar a vara em qualquer poça. A Advanced Rod (750 Sand Dollars) é a melhor primeira compra.",
+      "É limitado: cápsulas e itens da loja saem quando o Summer Siege acabar. Compre os itens de evolução de qualquer unidade que você planeja montar antes disso.",
+    ],
     faqTitle: "PERGUNTAS FREQUENTES",
     faq: [
       { q: "Como funciona o sistema de pity de invocação?", a: "Anime Expeditions usa um sistema de pity nos banners, mas os limites exatos mudam a cada banner. Sempre abra o painel de Rates no jogo para ver o pool atual e o contador de pity antes de gastar Gems." },
@@ -723,6 +746,13 @@ export const plannerGuide: Record<Locale, PlannerGuideStrings> = {
     summonsBody1: "Anime Expeditions сочетает призывы по баннерам с волновым tower defense. Тратьте бесплатные билеты Beginner Banner раньше Gems и открывайте ",
     ratesPanel: "панель Rates",
     summonsBody2: " в игре, чтобы увидеть текущий пул и pity перед круткой. Прекращайте призывать, когда команда закрывает ранние волны, скученных врагов и боссов.",
+    economyTitle: "ЭКОНОМИКА UPDATE 2.0 — SAND DOLLARS И РЫБАЛКА",
+    economyBody: [
+      "Sand Dollars — валюта события Summer Siege: зарабатывайте их на волнах Tidal Siege, в ивентовых заданиях, наградах за вход и на рыбалке.",
+      "Тратьте их в ивентовом магазине: Summer Capsules (100 штука, 10 за 1 000) содержат лимитированных юнитов, а предметы эволюции новых юнитов стоят 10 000 каждый — планируйте бюджет до круток.",
+      "Рыбалка — бесплатный дополнительный доход: улов, Sand Dollars и награды за вехи просто за заброс в любой водоём. Advanced Rod (750 Sand Dollars) — лучшая первая покупка.",
+      "Всё ограничено по времени: капсулы и товары магазина исчезнут с концом Summer Siege. Купите предметы эволюции для юнитов, которых планируете собрать, заранее.",
+    ],
     faqTitle: "ВОПРОСЫ И ОТВЕТЫ",
     faq: [
       { q: "Как работает система pity в призывах?", a: "В Anime Expeditions на баннерах есть pity, но точные пороги меняются с каждым баннером. Всегда открывайте панель Rates в игре, чтобы увидеть текущий пул и счётчик pity перед тратой Gems." },

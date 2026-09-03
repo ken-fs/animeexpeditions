@@ -43,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/maps/", changeFrequency: "monthly", priority: 0.7 },
     { path: "/updates/", changeFrequency: "weekly", priority: 0.7 },
     { path: "/game-modes/", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/fishing/", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/tidal-siege/", changeFrequency: "weekly", priority: 0.7 },
     { path: "/gamepasses/", changeFrequency: "monthly", priority: 0.6 },
     { path: "/about/", changeFrequency: "monthly", priority: 0.3 },
   ];

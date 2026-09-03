@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Panel, CabinetFooter } from "@/components/crt";
-import { units, unitsByTier, TIER_ORDER, UNITS_VERIFIED, type Tier } from "@/data/units";
+import { units, unitsByTier, unitRole, TIER_ORDER, UNITS_VERIFIED, type Tier } from "@/data/units";
 import { tierUnits, intlLocale, localePath, type Locale } from "@/data/i18n";
 
 const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
@@ -66,7 +66,7 @@ export function TierListView({ locale }: { locale: Locale }) {
                     className="flex items-center justify-between gap-4 border-b-2 border-grid px-4 py-3 last:border-b-0"
                   >
                     <span className="text-fg">{u.name}</span>
-                    <span className="text-right text-dim">{u.role}</span>
+                    <span className="text-right text-dim">{unitRole(u, locale)}</span>
                   </div>
                 ))}
               </div>

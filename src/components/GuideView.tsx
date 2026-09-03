@@ -81,6 +81,21 @@ export function GuideView({ locale }: { locale: Locale }) {
           </p>
         </section>
 
+        {/* Update 2.0 economy */}
+        <section className="mt-14">
+          <Marquee color="green">{t.economyTitle}</Marquee>
+          <ul className="mt-5 space-y-4">
+            {t.economyBody.map((line, i) => (
+              <li key={i} className="flex gap-4">
+                <span className="font-display text-sm phosphor-magenta">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-fg">{line}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* FAQ */}
         <section className="mt-14">
           <Marquee color="cyan">{t.faqTitle}</Marquee>

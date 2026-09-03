@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Panel, CabinetFooter } from "@/components/crt";
-import { units, TIER_ORDER, unitsByTier, UNITS_VERIFIED, type Tier } from "@/data/units";
+import { units, TIER_ORDER, unitsByTier, unitRole, UNITS_VERIFIED, type Tier } from "@/data/units";
 import { tierUnits, intlLocale, localePath, type Locale } from "@/data/i18n";
 
 const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
@@ -71,7 +71,7 @@ export function UnitsView({ locale }: { locale: Locale }) {
                       <dt className="w-24 shrink-0 font-display text-[0.55rem] phosphor-cyan">
                         {t.role}
                       </dt>
-                      <dd>{u.role}</dd>
+                      <dd>{unitRole(u, locale)}</dd>
                     </div>
                     {u.evolveItem && (
                       <div className="flex gap-3">

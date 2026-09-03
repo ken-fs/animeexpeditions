@@ -20,6 +20,8 @@ const EN_ONLY_LINKS = [
   { href: "/maps/", label: "MAPS" },
   { href: "/updates/", label: "UPDATES" },
   { href: "/game-modes/", label: "MODES" },
+  { href: "/fishing/", label: "FISHING" },
+  { href: "/tidal-siege/", label: "SIEGE" },
 ];
 
 function currentLocale(pathname: string): Locale {

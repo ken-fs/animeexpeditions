@@ -46,17 +46,28 @@
 
 ## ⏳ 待办（下次做）
 
-1. **多语言翻译**：es/pt/ru 的单位 role 描述仍是英文（审计判为"半吊子机翻"）。要么补全翻译，要么维持现状。新增的 6 英文页也还没多语言版本——**刻意的**，等英文版验证有效再投入翻译（见 memory：先做单站验证）。
+1. ~~多语言翻译：es/pt/ru 单位 role 描述~~ ✅ 2026-09-03 已补全（`units.ts` 的 `roleI18n`，en 为源）。新增的 8 个英文页（含 `/fishing/`、`/tidal-siege/`）仍无多语言版——**刻意的**，等英文版验证有效再投入翻译。
 2. **GSC 手动请求收录**：核心英文页（`/`、`/tier-list/`、`/traits/`）去 Search Console 点"请求编入索引"催一下。
-3. **看数据再优化**：等 14 页进索引 + AI 爬虫重新抓取（几天），看 GSC 哪些页有曝光，再针对性补内容。
+3. **看数据再优化**：等 16 页进索引 + AI 爬虫重新抓取（几天），看 GSC 哪些页有曝光，再针对性补内容。
 4. **数据维护**：游戏更新时改这些数据文件即可（组件不用动）：
    - `src/data/codes.ts` — 新码 / 过期码 + `LAST_VERIFIED`
-   - `src/data/units.ts` — 单位 / tier
+   - `src/data/units.ts` — 单位 / tier / evolveItem / roleI18n
    - `src/data/updates.ts` — **顶部加新更新条目**（这是主要新鲜度信号，保持更新）
-   - `src/data/traits.ts` / `maps.ts` / `gamepasses.ts` / `checklist.ts`
+   - `src/data/traits.ts` / `maps.ts` / `gamepasses.ts` / `checklist.ts` / `fishing.ts` / `tidalSiege.ts` / `ads.ts`
 5. **未做的工具**（数据门槛高，缺可信数据别硬做）：
    - Damage Calculator — 需要每个单位的攻击/攻速**数值**，现有数据只有 role 文字
    - Summon/Banner Planner — 需要 banner 概率数据
+6. **Adsterra**：`public/ads.txt` 待补 Adsterra 记录（后台复制）；广告位只铺了首页，可扩到 tier-list/units。
+
+## 2026-09-03 Update 2.0 [Summer Siege] 大更记录
+
+- **游戏更新**：Update 2.0 于 8/31 上线（Tidal Siege 活动、钓鱼系统、Portals、9 新单位、Battlepass S2、Sand Dollars 经济）。
+- **codes**：Update2/EclipseSoon（9/4 过期）+ 3 个已过期码；下一波盯 800M 访问里程碑 + Eclipse 更新（已被 EclipseSoon 预告）。
+- **新页面**：`/fishing/`（5 鱼竿全表 + 产出 + 刷竿路线）、`/tidal-siege/`（活动经济 + Portals + Secret 单位获取路线）。
+- **units**：9 新单位 + 7 个进化材料（sportskeeda/allthings 交叉验证）；Kitsune/Jester 无进化。
+- **素材**：5 张官方 key art（WebP）+ Update 2.0 官方预告嵌入；原 launch 预告已被官方下架（YouTube 嵌入会腐坏，注意）。
+- **设计**：CRT 世界精修（hero 艺术带、Marquee 铭牌线、高分榜排名号、导航当前页高亮）。
+- **变现**：接入 Adsterra（728×90 + 300×250），`AdSlot` 组件带全局队列防 atOptions 竞态。
 
 ## ⚠️ 数据准确性提醒
 
