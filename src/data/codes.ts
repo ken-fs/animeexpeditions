@@ -9,19 +9,50 @@ export interface GameCode {
   expires?: string; // ISO date, when a still-active code is known to expire
 }
 
-// Last verified against live sources (eurogamer + radiotimes + gamerant + beebom, cross-checked). Update on every check.
-export const LAST_VERIFIED = "2026-08-31"; // ISO date, shown as "Last verified"
-// 2026-08-31: Roblox games API currently returns content-restricted/zeroed data for
-// universeId 7613921865 (votes endpoint still live), so visits can't be re-verified.
-// Keeping the last confirmed figure.
+// Last verified against live sources (gamesradar + beebom + IGN + aprasi, cross-checked). Update on every check.
+export const LAST_VERIFIED = "2026-09-03"; // ISO date, shown as "Last verified"
+// 2026-09-03: Roblox games API still returns content-restricted/zeroed data for
+// universeId 7613921865 (votes endpoint still live: ~264K upvotes), so visits can't
+// be re-verified. Keeping the last confirmed figure.
 export const GAME_VISITS = "720M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
 export const NEXT_MILESTONE_HINT =
-  "Update 2.0 [Summer] is officially teased — fresh codes historically drop with big updates and visit milestones (next up: 800M).";
+  "Update 2.0 [Summer Siege] dropped Aug 31 with its own codes, an Eclipse update is already teased (EclipseSoon), and the 800M-visits milestone is still ahead — all prime spots for fresh codes.";
 
 export const codes: GameCode[] = [
-  // 2026-08-31: no active codes. eurogamer (Aug 24) states "no working codes",
-  // radiotimes shows zero actives with everything below on its expired list.
+  // 2026-09-03: Update 2.0 [Summer Siege] launched Aug 31 with five new codes.
+  // gamesradar lists explicit expiry dates; rewards cross-checked vs beebom + IGN.
+  {
+    code: "Update2",
+    reward: "50 Stat Rerolls, 20 Trait Crystals",
+    status: "active",
+    expires: "2026-09-04", // per gamesradar
+  },
+  {
+    // Teases the next (Eclipse) update.
+    code: "EclipseSoon",
+    reward: "50 Trait Crystals",
+    status: "active",
+    expires: "2026-09-04", // per gamesradar
+  },
   // --- expired below ---
+  {
+    // Update 2.0 launch code, dead Sep 2 per gamesradar. Requires Level 25 in-game.
+    code: "SummerSiege",
+    reward: "50 Equipment Rerolls, 800 Sand Dollars (Level 25+)",
+    status: "expired",
+  },
+  {
+    // In-game spelling really is "LighthingGod". Dead Sep 2 per gamesradar.
+    code: "LighthingGod",
+    reward: "20 Trait Crystals, 500 Sand Dollars (Level 25+)",
+    status: "expired",
+  },
+  {
+    // Dead Sep 1 per gamesradar.
+    code: "QuickRestart!",
+    reward: "25 Trait Crystals",
+    status: "expired",
+  },
   {
     // Active Aug 18–20 (gamerant, beebom), dead by Aug 24 (eurogamer/radiotimes).
     code: "700mvisits",

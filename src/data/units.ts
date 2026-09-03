@@ -1,6 +1,8 @@
 // Anime Expeditions units + tier list — real data.
-// Tiers re-ranked 2026-08-22 against the Beebom tier list (updated 2026-08-11),
-// which uses an SS / S+ / S / A ordering; unit passives/roles quoted from there.
+// Tiers re-ranked 2026-09-03 against the Beebom tier list (updated for Update 2.0),
+// which uses an SS / S+ / S / A ordering; unit passives/roles condensed from there.
+// Update 2.0 [Summer Siege] added 9 units: Sovereign, Lightning God, Sand, Kitsune,
+// Head Captain, Sharkfang, Rainman, Water Mage, Jester.
 // Base forms follow the game's "Base (Form)" naming (e.g. "Vegetable (Prince)" →
 // base "Vegetable"); rarity rotates via banners so it is not fixed here.
 // Keep this the single source of truth for the tier-list + units pages.
@@ -8,7 +10,7 @@
 // meta shifts. B / Watch tiers are retained in the scheme but currently empty;
 // the views skip empty tiers so they don't render blank panels.
 
-export const UNITS_VERIFIED = "2026-08-22";
+export const UNITS_VERIFIED = "2026-09-03";
 
 export type Tier = "SS" | "S+" | "S" | "A" | "B" | "Watch";
 
@@ -22,15 +24,21 @@ export interface Unit {
 
 export const units: Unit[] = [
   // SS Tier — top of the meta
+  { name: "Sovereign (Djinn)", base: "Sovereign", tier: "SS", role: "Boss-killer carry (swaps Djinn forms vs bosses)" },
   { name: "Vegetable (Prince)", base: "Vegetable", tier: "SS", role: "Scaling carry (buffs from nearby units)" },
+  { name: "Lightning God (Overcharged)", base: "Lightning God", tier: "SS", role: "Scaling DPS (Voltage Meter, up to +300%)" },
   { name: "Prodigy (Rage)", base: "Prodigy", tier: "SS", role: "AoE burst (every 3rd attack)" },
   { name: "Dark Mage (Sovereign)", base: "Dark Mage", tier: "SS", role: "Dual-element damage" },
   { name: "Shadow (Divine)", base: "Shadow", tier: "SS", role: "Scaling carry (summon-based)" },
+  { name: "Sand (Alligator)", base: "Sand", tier: "SS", role: "AoE control + burst (Sandstorm, 65% slow, stun)" },
   { name: "Bioinsect (Final Form)", base: "Bioinsect", tier: "SS", role: "Evolving boss-summon carry" },
   { name: "8th Sword (Berserker)", base: "8th Sword", tier: "SS", role: "Damage / specialist" },
   { name: "Crow (Black Fire)", base: "Crow", tier: "SS", role: "Secret unit (needs full build)" },
   // S+ Tier
+  { name: "Kitsune", base: "Kitsune", tier: "S+", role: "Support buffer (strongest-unit + team dmg buffs)" },
+  { name: "Head Captain (Char)", base: "Head Captain", tier: "S+", role: "Infinite Burn stacking (up to +150% dmg taken)" },
   { name: "Carrot (Unleashed)", base: "Carrot", tier: "S+", role: "Crit-charged transform DPS" },
+  { name: "Sharkfang (Abyssal)", base: "Sharkfang", tier: "S+", role: "Control DPS (Waterfall slow, Tidal Wave rewind)" },
   { name: "Puppet (Telekinetic)", base: "Puppet", tier: "S+", role: "Control (enemy rewind)", evolveItem: "Puppet Heart" },
   { name: "Cursed Student (True Love)", base: "Cursed Student", tier: "S+", role: "Scaling carry / DPS", evolveItem: "Student ID" },
   { name: "Toy Maker", base: "Toy Maker", tier: "S+", role: "Damage / specialist", evolveItem: "Joker of the Nonsensical Pirates" },
@@ -38,6 +46,8 @@ export const units: Unit[] = [
   { name: "Cubert", base: "Cubert", tier: "S+", role: "Battlefield control (cube summons)" },
   { name: "The Drink (Juicebox)", base: "The Drink", tier: "S+", role: "Follow-up amplifier (The Drink Mark)" },
   // S Tier
+  { name: "Rainman (Forecast)", base: "Rainman", tier: "S", role: "AoE + control (Frog Storm, Poison Frogs)" },
+  { name: "Water Mage (Scholar)", base: "Water Mage", tier: "S", role: "Freeze control (Shatter, Wall of Ice traps)" },
   { name: "Crimson (Brother)", base: "Crimson", tier: "S", role: "Targeted damage (Crimson Mark)" },
   { name: "Flame Emperor (Reincarnate)", base: "Flame Emperor", tier: "S", role: "AoE / damage-over-time", evolveItem: "Burning Fruit" },
   { name: "Salmon Sorcerer (Grade 1)", base: "Salmon Sorcerer", tier: "S", role: "Control (slow & stagger)", evolveItem: "Salmon" },
@@ -46,6 +56,7 @@ export const units: Unit[] = [
   { name: "Ramen Guy", base: "Ramen Guy", tier: "S", role: "Economy (+50% Yen from kills)" },
   // A Tier
   { name: "Cursed Immortal (Black Sun)", base: "Cursed Immortal", tier: "A", role: "Burst damage (falls off in long levels)" },
+  { name: "Jester", base: "Jester", tier: "A", role: "Random-weapon DPS (Scythe / Rifle / Mace)" },
   { name: "String Demon (Awakened)", base: "String Demon", tier: "A", role: "Follow-up synergy" },
   { name: "Reaper (Released)", base: "Reaper", tier: "A", role: "Damage / specialist" },
   { name: "Hollow (Blaze)", base: "Hollow", tier: "A", role: "Damage / specialist" },

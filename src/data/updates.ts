@@ -4,7 +4,7 @@
 // Add the newest update at the TOP as new patches drop — this is the site's
 // main freshness signal, so keep dates accurate.
 
-export const UPDATES_VERIFIED = "2026-08-31";
+export const UPDATES_VERIFIED = "2026-09-03";
 
 export interface GameUpdate {
   version: string; // e.g. "Update 1.0"
@@ -17,13 +17,16 @@ export interface GameUpdate {
 export const updates: GameUpdate[] = [
   {
     version: "Update 2.0",
-    title: "Summer",
-    date: "Teased Aug 18, 2026 — release window unannounced",
-    status: "provisional",
+    title: "Summer Siege",
+    date: "Released Aug 31, 2026",
+    status: "provisional", // changelog via sportskeeda's transcript of the official in-game log; client details unverified first-hand
     highlights: [
-      "Official Roblox event listing UPDATE 2.0 [SUMMER] promises new content and units; the posted dates are marked unofficial.",
-      "First sneak posted on the official X account (@ExpeditionsRBLX) on Aug 18, 2026.",
-      "No changelog, units, or mode details confirmed yet.",
+      "Tidal Siege event: clear waves for Sand Dollars (event currency) and Summer Capsules containing limited units and skins.",
+      "Fishing system: five rods (Normal, Auto, Advanced, Lucky, Recycling) — Lucky Rod is the rare 1% pull. Fish for units, traits, and gear, with ranks and milestone rewards.",
+      "9 new units with evolutions — incl. Sovereign (Djinn), Lightning God (Overcharged), Sand (Alligator), Kitsune, Head Captain (Char), Sharkfang (Abyssal), Rainman (Forecast), Water Mage (Scholar), Jester — folded into the units page and tier list.",
+      "4 new Portals, Battlepass Season 2, 7 new equipment, 6 skins, 5 mounts (surfboards + Crab), 3 accessories, 5 events, 4 Summer Bundles, plus QoL.",
+      "Launch codes: Update2 and EclipseSoon (expire Sep 4), SummerSiege and LighthingGod (expired Sep 2, Level 25+). EclipseSoon teases the next update.",
+      "First teased on the official X account (@ExpeditionsRBLX) on Aug 18, 2026.",
     ],
   },
   {
