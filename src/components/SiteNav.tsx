@@ -27,6 +27,12 @@ function currentLocale(pathname: string): Locale {
   return (LOCALES as readonly string[]).includes(seg) ? (seg as Locale) : "en";
 }
 
+function isActivePath(pathname: string, href: string): boolean {
+  const clean = pathname.replace(/\/+$/, "") || "/";
+  if (href === "/") return ["/", "/es", "/pt", "/ru"].includes(clean);
+  return clean.startsWith(href.replace(/\/+$/, ""));
+}
+
 export function SiteNav() {
   const pathname = usePathname() || "/";
   const locale = currentLocale(pathname);
@@ -39,15 +45,23 @@ export function SiteNav() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-display text-[0.6rem]">
-          {[...LINKS, ...(locale === "en" ? EN_ONLY_LINKS : [])].map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-dim transition-colors hover:text-fg hover:[text-shadow:0_0_8px_rgba(67,224,232,0.6)]"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {[...LINKS, ...(locale === "en" ? EN_ONLY_LINKS : [])].map((l) => {
+            const active = isActivePath(pathname, l.href);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={
+                  active
+                    ? "phosphor-cyan"
+                    : "text-dim transition-colors hover:text-fg hover:[text-shadow:0_0_8px_rgba(67,224,232,0.6)]"
+                }
+              >
+                {l.label}
+              </Link>
+            );
+          })}
 
           {/* Language switcher — nav-level, top right */}
           <span className="flex items-center gap-2 border-l-2 border-grid pl-4 text-[0.55rem]">

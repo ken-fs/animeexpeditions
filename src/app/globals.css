@@ -72,6 +72,15 @@ body {
 .phosphor-green { color: var(--green); text-shadow: 0 0 8px rgba(87, 242, 160, 0.5); }
 .phosphor-magenta { color: var(--magenta); text-shadow: 0 0 8px rgba(255, 79, 163, 0.5); }
 
+/* Keyboard focus in phosphor cyan — never invisible. */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .blink { animation: none !important; }
 }

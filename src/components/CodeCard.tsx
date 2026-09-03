@@ -7,6 +7,7 @@ export function CodeCard({
   code,
   reward,
   expires,
+  rank,
   copyLabel = "COPY",
   copiedLabel = "GOT IT",
   expiresPrefix = "EXPIRES",
@@ -15,6 +16,7 @@ export function CodeCard({
   code: string;
   reward: string;
   expires?: string;
+  rank?: number; // high-score board position (01, 02…)
   copyLabel?: string;
   copiedLabel?: string;
   expiresPrefix?: string;
@@ -40,6 +42,11 @@ export function CodeCard({
 
   return (
     <div className="flex items-center justify-between gap-4 border-b-2 border-grid bg-screen-2/40 px-4 py-3 last:border-b-0">
+      {rank !== undefined && (
+        <span aria-hidden="true" className="hidden shrink-0 font-display text-sm phosphor-magenta sm:block">
+          {String(rank).padStart(2, "0")}
+        </span>
+      )}
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <code className="font-display text-base phosphor-green break-all">{code}</code>

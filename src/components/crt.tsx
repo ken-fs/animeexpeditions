@@ -10,14 +10,14 @@ export function Panel({
 }) {
   return (
     <div
-      className={`border-2 border-grid bg-screen-2/40 shadow-[0_0_0_1px_rgba(67,224,232,0.08),0_0_24px_rgba(10,10,40,0.6)] ${className}`}
+      className={`border-2 border-grid bg-screen-2/40 shadow-[0_0_0_1px_rgba(67,224,232,0.08),0_0_24px_rgba(10,10,40,0.6),inset_0_1px_0_rgba(238,240,238,0.06)] ${className}`}
     >
       {children}
     </div>
   );
 }
 
-/** Marquee-style section heading in the pixel display face. */
+/** Marquee-style section heading: pixel text + phosphor rule, cabinet plate. */
 export function Marquee({
   children,
   color = "cyan",
@@ -26,8 +26,11 @@ export function Marquee({
   color?: "cyan" | "amber" | "green" | "magenta";
 }) {
   return (
-    <h2 className={`font-display text-base leading-snug phosphor-${color} sm:text-lg`}>
-      {children}
+    <h2
+      className={`flex w-full items-center gap-4 font-display text-base leading-snug phosphor-${color} sm:text-lg`}
+    >
+      <span className="shrink-0">{children}</span>
+      <span aria-hidden="true" className="h-0.5 min-w-8 flex-1 bg-current opacity-25" />
     </h2>
   );
 }

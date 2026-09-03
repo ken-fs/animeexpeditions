@@ -29,19 +29,35 @@ export function CodesPageView({ locale }: { locale: Locale }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main className="mx-auto w-full max-w-4xl px-5 py-10 sm:py-14">
-        {/* Marquee title */}
-        <section className="text-center">
-          <h1 className="font-display text-2xl leading-relaxed phosphor-amber sm:text-4xl sm:leading-relaxed">
-            ANIME EXPEDITIONS
-            <span className="mt-4 block phosphor-cyan text-lg sm:text-2xl">
-              {t.titleSub}
-            </span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-dim">{t.intro}</p>
-          <p className="mt-4 font-display text-[0.55rem] leading-relaxed text-dim">
-            <span className="phosphor-green">● {t.liveLabel}</span> · {t.verified}{" "}
-            {prettyDate.toUpperCase()} · {GAME_VISITS} {t.visits}
-          </p>
+        {/* Marquee title — cabinet hero backed by official key art */}
+        <section className="relative overflow-hidden border-2 border-grid text-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/game/promo-1.webp"
+            alt=""
+            aria-hidden="true"
+            width={768}
+            height={432}
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full object-cover object-center opacity-30 saturate-[0.65]"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-b from-screen/60 via-screen/80 to-screen"
+          />
+          <div className="relative px-5 py-12 sm:py-16">
+            <h1 className="font-display text-2xl leading-relaxed phosphor-amber sm:text-4xl sm:leading-relaxed">
+              ANIME EXPEDITIONS
+              <span className="mt-4 block phosphor-cyan text-lg sm:text-2xl">
+                {t.titleSub}
+              </span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-xl text-dim">{t.intro}</p>
+            <p className="mt-4 font-display text-[0.55rem] leading-relaxed text-dim">
+              <span className="phosphor-green">● {t.liveLabel}</span> · {t.verified}{" "}
+              {prettyDate.toUpperCase()} · {GAME_VISITS} {t.visits}
+            </p>
+          </div>
         </section>
 
         {/* Codes board */}
@@ -53,9 +69,10 @@ export function CodesPageView({ locale }: { locale: Locale }) {
             </span>
           </div>
           <div>
-            {activeCodes.map((c) => (
+            {activeCodes.map((c, i) => (
               <CodeCard
                 key={c.code}
+                rank={i + 1}
                 code={c.code}
                 reward={c.reward}
                 expires={c.expires}
@@ -100,7 +117,11 @@ export function CodesPageView({ locale }: { locale: Locale }) {
         </section>
 
         {/* Official game media — Roblox screenshots + YouTube trailer */}
-        <GameMedia screenshotsTitle={t.screenshotsTitle} trailerTitle={t.trailerTitle} />
+        <GameMedia
+          screenshotsTitle={t.screenshotsTitle}
+          trailerTitle={t.trailerTitle}
+          trailerNewTitle={t.trailerNewTitle}
+        />
 
         {/* Expired */}
         <section className="mt-14">
