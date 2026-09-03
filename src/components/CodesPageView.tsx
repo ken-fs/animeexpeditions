@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { CodeCard } from "@/components/CodeCard";
 import { Panel, Marquee } from "@/components/crt";
 import { GameMedia } from "@/components/GameMedia";
+import { ADSTERRA } from "@/data/ads";
 import { activeCodes, expiredCodes, LAST_VERIFIED, GAME_VISITS, ROBLOX_GAME_URL } from "@/data/codes";
 import { codesPage, type Locale } from "@/data/i18n";
 
@@ -60,6 +62,9 @@ export function CodesPageView({ locale }: { locale: Locale }) {
           </div>
         </section>
 
+        {/* Leaderboard — desktop only (728px overflows small screens) */}
+        <AdSlot unit={ADSTERRA.leaderboard} className="mt-8 hidden md:flex" />
+
         {/* Codes board */}
         <Panel className="mt-10">
           <div className="flex items-center justify-between border-b-2 border-grid px-4 py-3">
@@ -92,6 +97,9 @@ export function CodesPageView({ locale }: { locale: Locale }) {
           <span className="phosphor-amber font-display text-[0.55rem]">{t.nextUp}</span>{" "}
           {t.nextUpBody}
         </p>
+
+        {/* Medium rectangle — in-content, fits every viewport */}
+        <AdSlot unit={ADSTERRA.rectangle} className="mt-10" />
 
         {/* How to redeem */}
         <section className="mt-14">
