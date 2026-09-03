@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hreflangAlternates } from "@/lib/seo";
 import { ChecklistView } from "@/components/ChecklistView";
 
 export const metadata: Metadata = {

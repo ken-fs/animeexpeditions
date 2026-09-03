@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hreflangAlternates } from "@/lib/seo";
 import { TeamBuilderView } from "@/components/TeamBuilderView";
 
 export const metadata: Metadata = {

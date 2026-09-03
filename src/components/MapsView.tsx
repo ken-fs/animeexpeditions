@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Panel, Marquee, CabinetFooter } from "@/components/crt";
-import { storyMaps, MAPS_VERIFIED } from "@/data/maps";
-import { intlLocale, localePath, type Locale } from "@/data/i18n";
+import { Panel, Marquee, CabinetFooter, CrossLinks } from "@/components/crt";
+import { storyMaps, MAPS_VERIFIED, type MapDrop } from "@/data/maps";
+import { mapsPage } from "@/data/pages/contentPages";
+import { intlLocale, type Locale } from "@/data/i18n";
 
 const TYPE_PHOSPHOR = {
   Food: "green",
@@ -9,27 +9,26 @@ const TYPE_PHOSPHOR = {
   "Unit equipment": "amber",
 } as const;
 
-// English-only for now.
 export function MapsView({ locale = "en" }: { locale?: Locale }) {
+  const t = mapsPage[locale];
   const prettyDate = new Date(MAPS_VERIFIED).toLocaleDateString(intlLocale(locale), {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
+  const typeLabel = (type: MapDrop["type"]) =>
+    type === "Food" ? t.typeLabels.food : type === "Standard equipment" ? t.typeLabels.standard : t.typeLabels.unit;
+
   return (
     <main className="mx-auto w-full max-w-4xl px-5 py-10 sm:py-14">
       <header className="text-center">
         <h1 className="font-display text-xl leading-relaxed phosphor-cyan sm:text-3xl sm:leading-relaxed">
-          ANIME EXPEDITIONS MAPS &amp; DROPS
+          {t.h1}
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-dim">
-          The five Story maps in order, and what each one drops — food, standard
-          equipment, and the unit equipment that ties to a specific evolved unit.
-          Farm the map that holds the piece you actually need.
-        </p>
+        <p className="mx-auto mt-5 max-w-xl text-dim">{t.intro}</p>
         <p className="mt-4 font-display text-[0.55rem] text-dim">
-          REPORTED · VERIFIED {prettyDate.toUpperCase()}
+          {t.stamp} {prettyDate.toUpperCase()}
         </p>
       </header>
 
@@ -50,12 +49,12 @@ export function MapsView({ locale = "en" }: { locale?: Locale }) {
                   <div className="flex items-baseline justify-between gap-2">
                     <h3 className="phosphor-amber">{d.name}</h3>
                     <span className={`font-display text-[0.5rem] phosphor-${TYPE_PHOSPHOR[d.type]}`}>
-                      {d.type.toUpperCase()}
+                      {typeLabel(d.type)}
                     </span>
                   </div>
                   {d.forUnit && (
                     <p className="mt-1.5 text-dim">
-                      Unit gear for{" "}
+                      {t.unitGearFor}
                       <span className="text-fg">{d.forUnit}</span>
                     </p>
                   )}
@@ -67,31 +66,11 @@ export function MapsView({ locale = "en" }: { locale?: Locale }) {
       </div>
 
       <section className="mt-14">
-        <Marquee color="amber">HOW TO USE THIS</Marquee>
-        <p className="mt-4 text-dim">
-          Unit equipment is map-locked: each evolved carry pulls its signature
-          gear from one specific Story map, so there&apos;s no point grinding the
-          wrong stage. Standard equipment and food drop more broadly. These are
-          reported associations, not guaranteed drop rates — confirm the drop in
-          the live game panel before you commit a long farm.
-        </p>
+        <Marquee color="amber">{t.howTitle}</Marquee>
+        <p className="mt-4 text-dim">{t.howBody}</p>
       </section>
 
-      <p className="mt-12 text-dim">
-        Work out which units are worth gearing on the{" "}
-        <Link href={localePath(locale, "/tier-list/")} className="phosphor-cyan hover:underline">
-          tier list
-        </Link>
-        , plan their evolutions in the{" "}
-        <Link href={localePath(locale, "/evolution-planner/")} className="phosphor-cyan hover:underline">
-          evolution planner
-        </Link>
-        , then farm the right map above. Weighing a{" "}
-        <Link href="/gamepasses/" className="phosphor-cyan hover:underline">
-          gamepass
-        </Link>{" "}
-        instead? See what each one really does first.
-      </p>
+      <CrossLinks cross={t.cross} locale={locale} />
 
       <CabinetFooter />
     </main>

@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { units, TIER_ORDER, unitsByTier, type Tier } from "@/data/units";
+import { units, TIER_ORDER, unitsByTier, unitRole, type Tier } from "@/data/units";
+import { teamBuilderPage, type TeamBuilderStrings } from "@/data/pages/toolsPages";
+import type { Locale } from "@/data/i18n";
 
 const MAX_TEAM = 6;
 
@@ -14,13 +16,14 @@ const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
   Watch: "magenta",
 };
 
-// Rough role buckets derived from each unit's free-text role, so the builder can
-// flag coverage gaps without a separate data field. Order = display order.
-const ROLE_BUCKETS: { key: string; label: string; match: (role: string) => boolean }[] = [
-  { key: "dps", label: "Damage", match: (r) => /carry|dps|damage/i.test(r) },
-  { key: "support", label: "Support", match: (r) => /support|amplif|buff/i.test(r) },
-  { key: "control", label: "Control", match: (r) => /control|slow|stagger|stun|rewind/i.test(r) },
-  { key: "aoe", label: "AoE / DoT", match: (r) => /aoe|damage-over-time|dot/i.test(r) },
+// Rough role buckets derived from each unit's free-text English role (units.ts
+// `role` field is the matching source — localized display strings never feed
+// this regex). Order = display order.
+const ROLE_BUCKETS: { key: keyof TeamBuilderStrings["roleLabels"]; match: (role: string) => boolean }[] = [
+  { key: "dps", match: (r) => /carry|dps|damage/i.test(r) },
+  { key: "support", match: (r) => /support|amplif|buff/i.test(r) },
+  { key: "control", match: (r) => /control|slow|stagger|stun|rewind/i.test(r) },
+  { key: "aoe", match: (r) => /aoe|damage-over-time|dot/i.test(r) },
 ];
 
 function rolesOf(role: string): string[] {
@@ -28,7 +31,10 @@ function rolesOf(role: string): string[] {
   return hit.length ? hit : ["other"];
 }
 
-export function TeamBuilder() {
+// Strings are looked up in-module (teamBuilderPage) so functions like watchNote
+// stay usable — they can't cross the server→client prop boundary.
+export function TeamBuilder({ locale }: { locale: Locale }) {
+  const t = teamBuilderPage[locale];
   const [picked, setPicked] = useState<Set<string>>(new Set());
 
   function toggle(name: string) {
@@ -62,7 +68,7 @@ export function TeamBuilder() {
         {TIER_ORDER.filter((tier) => unitsByTier(tier).length > 0).map((tier) => (
           <fieldset key={tier}>
             <legend className={`mb-2 font-display text-[0.55rem] phosphor-${TIER_PHOSPHOR[tier]}`}>
-              {tier} TIER
+              {tier} {t.tierSuffix}
             </legend>
             <div className="grid gap-2 sm:grid-cols-2">
               {unitsByTier(tier).map((u) => {
@@ -95,7 +101,7 @@ export function TeamBuilder() {
                       className="sr-only"
                     />
                     <span className="flex-1">{u.name}</span>
-                    <span className="font-display text-[0.5rem] text-dim">{u.role}</span>
+                    <span className="font-display text-[0.5rem] text-dim">{unitRole(u, locale)}</span>
                   </label>
                 );
               })}
@@ -107,15 +113,11 @@ export function TeamBuilder() {
       {/* Analysis panel */}
       <aside className="h-fit border-2 border-grid bg-screen-2/40 p-5 lg:sticky lg:top-6">
         <h2 className="font-display text-[0.7rem] phosphor-amber">
-          YOUR TEAM · {picked.size}/{MAX_TEAM}
+          {t.yourTeam} · {picked.size}/{MAX_TEAM}
         </h2>
 
         {analysis.chosen.length === 0 ? (
-          <p className="mt-4 text-dim">
-            Pick up to six units. This checks your role coverage — a team with no
-            control or no support fails the harder stages no matter how much raw
-            damage it has.
-          </p>
+          <p className="mt-4 text-dim">{t.emptyState}</p>
         ) : (
           <div className="mt-4 space-y-4">
             <ul className="space-y-1.5">
@@ -131,7 +133,7 @@ export function TeamBuilder() {
 
             {/* Role coverage */}
             <div className="border-t-2 border-grid pt-3">
-              <p className="font-display text-[0.55rem] phosphor-cyan">ROLE COVERAGE</p>
+              <p className="font-display text-[0.55rem] phosphor-cyan">{t.roleCoverage}</p>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {ROLE_BUCKETS.map((b) => {
                   const on = analysis.covered.has(b.key);
@@ -142,7 +144,7 @@ export function TeamBuilder() {
                         on ? "border-cyan phosphor-cyan" : "border-grid/50 text-dim/50 line-through"
                       }`}
                     >
-                      {b.label.toUpperCase()}
+                      {t.roleLabels[b.key].toUpperCase()}
                     </span>
                   );
                 })}
@@ -153,32 +155,24 @@ export function TeamBuilder() {
             <div className="space-y-1.5 border-t-2 border-grid pt-3 text-dim">
               {analysis.gaps.length > 0 ? (
                 <p>
-                  <span className="phosphor-magenta">Gap: </span>
-                  no {analysis.gaps.map((g) => g.label.toLowerCase()).join(", ")}. The
-                  harder modes punish a missing role faster than a weaker unit.
+                  <span className="phosphor-magenta">{t.gapPre}</span>
+                  no {analysis.gaps.map((g) => t.roleLabels[g.key].toLowerCase()).join(", ")}
+                  {t.gapBody}
                 </p>
               ) : (
                 <p>
-                  <span className="phosphor-green">Balanced. </span>
-                  Damage, support, and control are all covered.
+                  <span className="phosphor-green">{t.balanced}</span>
                 </p>
               )}
-              {analysis.watch > 0 && (
-                <p>
-                  {analysis.watch} unproven (Watch-tier) pick
-                  {analysis.watch > 1 ? "s" : ""} — fine to test, risky to rely on.
-                </p>
-              )}
-              {analysis.sTier >= 3 && (
-                <p className="phosphor-amber">{analysis.sTier} S-tier carries — strong core.</p>
-              )}
+              {analysis.watch > 0 && <p>{t.watchNote(analysis.watch)}</p>}
+              {analysis.sTier >= 3 && <p className="phosphor-amber">{t.sTierNote(analysis.sTier)}</p>}
             </div>
 
             <button
               onClick={() => setPicked(new Set())}
               className="w-full border-2 border-magenta px-3 py-2 font-display text-[0.55rem] text-magenta transition hover:bg-magenta hover:text-screen"
             >
-              CLEAR TEAM
+              {t.clearTeam}
             </button>
           </div>
         )}

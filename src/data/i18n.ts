@@ -8,6 +8,11 @@ export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = "en";
 
+/** Pick a localized value with English fallback (for I18n sibling fields in data files). */
+export function loc<T>(map: Partial<Record<Locale, T>> | undefined, locale: Locale, fallback: T): T {
+  return map?.[locale] ?? fallback;
+}
+
 // Human-readable names + hreflang codes for <link> tags.
 export const LOCALE_META: Record<Locale, { label: string; hreflang: string }> = {
   en: { label: "EN", hreflang: "en" },

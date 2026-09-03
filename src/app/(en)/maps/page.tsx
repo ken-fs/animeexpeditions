@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hreflangAlternates } from "@/lib/seo";
 import { MapsView } from "@/components/MapsView";
 
 export const metadata: Metadata = {

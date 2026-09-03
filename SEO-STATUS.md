@@ -5,19 +5,20 @@
 ## 站点现状
 
 - **框架**：Next.js 16.3 static export（`output: export`），部署在 Cloudflare（wrangler，`./out` 作为静态资产）
+- **页面规模**：15 页 × 4 语言 = 60 URL（2026-09-03 全量本地化完成）
 - **部署方式**：push 到 `main` → 自动构建部署。改代码后不用手动 build。
 - **包管理**：用 **npm**（`package-lock.json`）。不要用 pnpm，会触发 `unrs-resolver` 构建脚本报错。
 - **本地构建**：`npm run build`；改路由结构后先 `rm -rf .next` 再 build（Next 16 会缓存旧的类型校验路径）。
 - **AdSense pub id**：`pub-4969757168101127`（与其他站共用同一账号）
 
-## 页面清单（14 页）
+## 页面清单（15 页 × 4 语言）
 
-**多语言页（en 根 + es/pt/ru）**
+**全部页面均有 en/es/pt/ru 四版本**（2026-09-03 完成全量本地化）
 - `/` Codes（首页）· `/tier-list/` · `/units/` · `/evolution-planner/` · `/beginner-guide/`
+- 内容页：`/traits/` · `/updates/` · `/game-modes/` · `/about/` · `/maps/` · `/gamepasses/` · `/fishing/` · `/tidal-siege/`
+- 交互工具：`/team-builder/` · `/daily-checklist/`
 
-**英文单页（本轮新增，暂无 es/pt/ru）**
-- 内容页：`/traits/` · `/updates/` · `/game-modes/` · `/about/` · `/maps/` · `/gamepasses/`
-- 交互工具：`/team-builder/` · `/daily-checklist/`（都在 `(en)` route group 下）
+**多语言架构**：页面文案集中在 `src/data/pages/`（contentPages/toolsPages/eventPages，Record\<Locale,…\>）；数据文件内嵌 I18n 兄弟字段（`roleI18n`/`highlightsI18n`/`summaryI18n` 等），`loc()` 回退英文；游戏专有名词（单位/物品/模式名）全语言保留英文。交互组件（TeamBuilder/DailyChecklist）在组件内查 locale 字典——函数型字符串不能过 server→client 边界。
 
 ## 本轮已完成（8 次提交，全部已上线）
 
@@ -46,7 +47,7 @@
 
 ## ⏳ 待办（下次做）
 
-1. ~~多语言翻译：es/pt/ru 单位 role 描述~~ ✅ 2026-09-03 已补全（`units.ts` 的 `roleI18n`，en 为源）。新增的 8 个英文页（含 `/fishing/`、`/tidal-siege/`）仍无多语言版——**刻意的**，等英文版验证有效再投入翻译。
+1. ~~多语言翻译~~ ✅ 2026-09-03 全量完成：role 翻译（`roleI18n`）+ 10 个原英文单页全部补齐 es/pt/ru（30 个新页面，hreflang + sitemap 60 URL）。翻译为 AI 生成，建议找母语者过一遍再大力推广（i18n.ts 头部注释同此意）。
 2. **GSC 手动请求收录**：核心英文页（`/`、`/tier-list/`、`/traits/`）去 Search Console 点"请求编入索引"催一下。
 3. **看数据再优化**：等 16 页进索引 + AI 爬虫重新抓取（几天），看 GSC 哪些页有曝光，再针对性补内容。
 4. **数据维护**：游戏更新时改这些数据文件即可（组件不用动）：

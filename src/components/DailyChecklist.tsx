@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { tasks, type Cadence } from "@/data/checklist";
+import { loc, type Locale } from "@/data/i18n";
+import { checklistPage } from "@/data/pages/toolsPages";
 
 const STORAGE_KEY = "ae-checklist-v1";
 
@@ -26,12 +28,9 @@ interface Stored {
   done: string[]; // checked task ids
 }
 
-const CADENCE_LABEL: Record<Cadence, string> = {
-  daily: "DAILY · resets at UTC midnight",
-  weekly: "WEEKLY · resets Monday (UTC)",
-};
-
-export function DailyChecklist() {
+// Strings are looked up in-module (checklistPage) — see TeamBuilder for why.
+export function DailyChecklist({ locale }: { locale: Locale }) {
+  const t = checklistPage[locale];
   const [done, setDone] = useState<Set<string>>(new Set());
   const [hydrated, setHydrated] = useState(false);
 
@@ -96,18 +95,18 @@ export function DailyChecklist() {
           <section key={cadence}>
             <div className="mb-3 flex items-center justify-between border-b-2 border-grid pb-2">
               <h2 className="font-display text-[0.6rem] phosphor-cyan">
-                {CADENCE_LABEL[cadence]}
+                {t.cadenceLabels[cadence]}
               </h2>
               <span className="font-display text-[0.55rem] text-dim">
                 {hydrated ? `${doneCount}/${list.length}` : `0/${list.length}`}
               </span>
             </div>
             <div className="space-y-2">
-              {list.map((t) => {
-                const on = hydrated && done.has(t.id);
+              {list.map((task) => {
+                const on = hydrated && done.has(task.id);
                 return (
                   <label
-                    key={t.id}
+                    key={task.id}
                     className={`flex cursor-pointer items-start gap-3 border-2 px-3 py-2.5 transition ${
                       on
                         ? "border-green bg-green/10"
@@ -125,12 +124,18 @@ export function DailyChecklist() {
                     <input
                       type="checkbox"
                       checked={on}
-                      onChange={() => toggle(t.id)}
+                      onChange={() => toggle(task.id)}
                       className="sr-only"
                     />
                     <span>
-                      <span className={on ? "text-dim line-through" : "text-fg"}>{t.label}</span>
-                      {t.note && <span className="mt-0.5 block text-dim">{t.note}</span>}
+                      <span className={on ? "text-dim line-through" : "text-fg"}>
+                        {loc(task.labelI18n, locale, task.label)}
+                      </span>
+                      {task.note && (
+                        <span className="mt-0.5 block text-dim">
+                          {loc(task.noteI18n, locale, task.note)}
+                        </span>
+                      )}
                     </span>
                   </label>
                 );
@@ -144,12 +149,9 @@ export function DailyChecklist() {
         onClick={resetAll}
         className="border-2 border-magenta px-4 py-2 font-display text-[0.55rem] text-magenta transition hover:bg-magenta hover:text-screen"
       >
-        RESET ALL
+        {t.resetAll}
       </button>
-      <p className="text-dim">
-        Progress is saved in this browser only — nothing is uploaded. Daily tasks
-        clear at UTC midnight, weekly tasks at the start of the ISO week.
-      </p>
+      <p className="text-dim">{t.privacyNote}</p>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hreflangAlternates } from "@/lib/seo";
 import { GamepassesView } from "@/components/GamepassesView";
 
 export const metadata: Metadata = {

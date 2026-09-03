@@ -10,10 +10,6 @@ const LINKS = [
   { href: "/units/", label: "ROSTER" },
   { href: "/evolution-planner/", label: "PLANNER" },
   { href: "/beginner-guide/", label: "GUIDE" },
-];
-
-// English-only pages (not yet localized). Shown only when locale === "en".
-const EN_ONLY_LINKS = [
   { href: "/team-builder/", label: "TEAM" },
   { href: "/daily-checklist/", label: "DAILY" },
   { href: "/traits/", label: "TRAITS" },
@@ -47,7 +43,7 @@ export function SiteNav() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-display text-[0.6rem]">
-          {[...LINKS, ...(locale === "en" ? EN_ONLY_LINKS : [])].map((l) => {
+          {LINKS.map((l) => {
             const active = isActivePath(pathname, l.href);
             return (
               <Link

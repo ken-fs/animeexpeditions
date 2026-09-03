@@ -14,6 +14,16 @@ const MULTILINGUAL: { path: string; changeFrequency: "daily" | "weekly" | "month
   { path: "/units/", changeFrequency: "weekly", priority: 0.8 },
   { path: "/evolution-planner/", changeFrequency: "weekly", priority: 0.7 },
   { path: "/beginner-guide/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/traits/", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/updates/", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/fishing/", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/tidal-siege/", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/team-builder/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/maps/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/game-modes/", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/gamepasses/", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/daily-checklist/", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/about/", changeFrequency: "monthly", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -33,23 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages },
       });
     }
-  }
-
-  // English-only pages (no locale variants yet).
-  const enOnly: { path: string; changeFrequency: "weekly" | "monthly"; priority: number }[] = [
-    { path: "/team-builder/", changeFrequency: "monthly", priority: 0.7 },
-    { path: "/daily-checklist/", changeFrequency: "monthly", priority: 0.6 },
-    { path: "/traits/", changeFrequency: "weekly", priority: 0.7 },
-    { path: "/maps/", changeFrequency: "monthly", priority: 0.7 },
-    { path: "/updates/", changeFrequency: "weekly", priority: 0.7 },
-    { path: "/game-modes/", changeFrequency: "monthly", priority: 0.6 },
-    { path: "/fishing/", changeFrequency: "weekly", priority: 0.7 },
-    { path: "/tidal-siege/", changeFrequency: "weekly", priority: 0.7 },
-    { path: "/gamepasses/", changeFrequency: "monthly", priority: 0.6 },
-    { path: "/about/", changeFrequency: "monthly", priority: 0.3 },
-  ];
-  for (const { path, changeFrequency, priority } of enOnly) {
-    entries.push({ url: SITE + path, lastModified, changeFrequency, priority });
   }
 
   return entries;
