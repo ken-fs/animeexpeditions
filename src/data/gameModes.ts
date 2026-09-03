@@ -2,7 +2,7 @@
 // Reported from community gameplay summaries; unlock levels and mechanics are
 // provisional until first-party confirmation.
 
-export const MODES_VERIFIED = "2026-08-10";
+export const MODES_VERIFIED = "2026-09-03";
 
 export interface GameMode {
   name: string;
@@ -33,6 +33,25 @@ export const gameModes: GameMode[] = [
     name: "Co-op",
     summary:
       "Combine rosters with other players. Party limits, shared economy, reward splits, and enemy scaling still need in-game verification, so treat co-op planning as provisional.",
+  },
+  {
+    name: "Tidal Siege",
+    unlock: "Update 2.0 (limited)",
+    limited: true,
+    summary:
+      "Update 2.0's headline wave event: clear waves for Sand Dollars (event currency) and Summer Capsules containing limited units and skins. Progress through ranks for milestone rewards while the event runs.",
+  },
+  {
+    name: "Fishing",
+    unlock: "Update 2.0",
+    summary:
+      "A side system that catches units, traits, and gear. Five rods to unlock — Normal, Auto, Advanced, Lucky, and Recycling — with the Lucky Rod at a reported ~1% acquisition chance. Open the fish icon at the bottom-left of the screen.",
+  },
+  {
+    name: "Portals",
+    unlock: "Update 2.0",
+    summary:
+      "Four new portal instances added in Update 2.0, with tiered difficulty and rewards. Portal mechanics and drop tables are still being mapped by the community — treat specifics as provisional.",
   },
   {
     name: "Villain Invasion",

@@ -2,7 +2,7 @@
 // A practical routine template for the current loop; adjust as modes change.
 // Progress is stored locally in the browser and resets on the cadence below.
 
-export const CHECKLIST_VERIFIED = "2026-08-10";
+export const CHECKLIST_VERIFIED = "2026-09-03";
 
 export type Cadence = "daily" | "weekly";
 
@@ -19,6 +19,8 @@ export const tasks: Task[] = [
   { id: "bounty", label: "Clear the Bounty Board", cadence: "daily", note: "Reroll objectives you can't finish with Gold; rewards Event Coins." },
   { id: "expedition", label: "Collect Expedition production", cadence: "daily", note: "Resource structures bank output — claim so it doesn't cap out." },
   { id: "story-energy", label: "Spend Story energy / tickets", cadence: "daily", note: "Don't let energy sit at max; farm the map you need drops from." },
+  { id: "tidal-siege", label: "Clear Tidal Siege waves", cadence: "daily", note: "Update 2.0 event — banks Sand Dollars and Summer Capsules each run." },
+  { id: "fishing", label: "Use your fishing rods", cadence: "daily", note: "Update 2.0 — fish for units, traits, and gear; work toward the Lucky Rod." },
   { id: "summon", label: "Free daily summon", cadence: "daily", note: "Take any free pull before the banner rotates." },
   { id: "shop", label: "Check the daily shop reset", cadence: "daily", note: "Grab cheap crystal/reroll deals; skip overpriced filler." },
 
