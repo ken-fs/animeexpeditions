@@ -12,46 +12,35 @@ const PROMO_SHOTS = [
   { src: "/game/promo-5.webp", alt: "Anime Expeditions gameplay — boss expedition" },
 ];
 
-// Official channel (@AnimeExpeditionsOfficial), verified live via YouTube oEmbed.
-// Newest first: the Update 2.0 trailer leads, the launch trailer follows.
-const TRAILERS = [
-  {
-    id: "7t5YwGIPKC4",
-    title: "Anime Expeditions — Update 2.0 Summer Siege Trailer",
-    uploadDate: "2026-08-30",
-  },
-  {
-    id: "ysDUclBoJHk",
-    title: "Anime Expeditions Official Trailer",
-    uploadDate: "2026-07-01",
-  },
-];
+// Official Update 2.0 trailer (@AnimeExpeditionsOfficial), verified live via YouTube
+// oEmbed. 2026-09-03: the channel removed the original launch trailer (ysDUclBoJHk
+// now returns "video unavailable" in embed), so only the Summer Siege trailer is shown.
+const TRAILER = {
+  id: "7t5YwGIPKC4",
+  title: "Anime Expeditions — Update 2.0 Summer Siege Trailer",
+  uploadDate: "2026-08-30",
+};
 
 export function GameMedia({
   screenshotsTitle,
   trailerTitle,
-  trailerNewTitle,
 }: {
   screenshotsTitle: string;
   trailerTitle: string;
-  trailerNewTitle: string;
 }) {
   const videoJsonLd = {
     "@context": "https://schema.org",
-    "@graph": TRAILERS.map((v) => ({
-      "@type": "VideoObject",
-      name: v.title,
-      description:
-        "Official gameplay trailer for Anime Expeditions, the anime tower-defense experience on Roblox.",
-      thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`,
-      uploadDate: v.uploadDate,
-      embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
-      contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
-    })),
+    "@type": "VideoObject",
+    name: TRAILER.title,
+    description:
+      "Official gameplay trailer for Anime Expeditions, the anime tower-defense experience on Roblox.",
+    thumbnailUrl: `https://i.ytimg.com/vi/${TRAILER.id}/maxresdefault.jpg`,
+    uploadDate: TRAILER.uploadDate,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${TRAILER.id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${TRAILER.id}`,
   };
 
   const [featured, ...restShots] = PROMO_SHOTS;
-  const trailerCaptions = [trailerNewTitle, trailerTitle];
 
   return (
     <section className="mt-14">
@@ -88,26 +77,17 @@ export function GameMedia({
       </div>
 
       <div className="mt-10">
-        <Marquee color="magenta">{trailerNewTitle}</Marquee>
-        <div className="mt-5 grid gap-5 sm:grid-cols-2">
-          {TRAILERS.map((v, i) => (
-            <figure key={v.id}>
-              <div className="aspect-video w-full border-2 border-grid">
-                <iframe
-                  className="h-full w-full"
-                  src={`https://www.youtube-nocookie.com/embed/${v.id}`}
-                  title={v.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-              <figcaption className="mt-2 font-display text-[0.55rem] text-dim">
-                {trailerCaptions[i]}
-              </figcaption>
-            </figure>
-          ))}
+        <Marquee color="magenta">{trailerTitle}</Marquee>
+        <div className="mt-5 aspect-video w-full border-2 border-grid">
+          <iframe
+            className="h-full w-full"
+            src={`https://www.youtube-nocookie.com/embed/${TRAILER.id}`}
+            title={TRAILER.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>

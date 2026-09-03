@@ -36,7 +36,7 @@ Phosphor colors carry a matching `text-shadow` glow via `.phosphor-*` classes.
 - Tier list = ranking board with glowing pixel tier badges (S=amber, A=cyan, B=green, Watch=magenta).
 - Steps use 2-digit magenta pixel numbers (01/02…), not circles.
 - Borders are 2px `--grid`; panels via `Panel` in `components/crt.tsx`. No rounded soft cards, no 1px hairlines.
-- Game media = one featured full-width shot + 2×2 grid (WebP mirrors of the Roblox thumbnail API), then two official YouTube embeds (Update 2.0 trailer first) with pixel captions.
+- Game media = one featured full-width shot + 2×2 grid (WebP mirrors of the Roblox thumbnail API), then the official Update 2.0 YouTube trailer embed.
 - Cross-links render as a cabinet menu grid at page end; nav highlights the active page in phosphor cyan (`aria-current`).
 
 ## Global chrome

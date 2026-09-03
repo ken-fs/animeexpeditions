@@ -117,11 +117,7 @@ export function CodesPageView({ locale }: { locale: Locale }) {
         </section>
 
         {/* Official game media — Roblox screenshots + YouTube trailer */}
-        <GameMedia
-          screenshotsTitle={t.screenshotsTitle}
-          trailerTitle={t.trailerTitle}
-          trailerNewTitle={t.trailerNewTitle}
-        />
+        <GameMedia screenshotsTitle={t.screenshotsTitle} trailerTitle={t.trailerTitle} />
 
         {/* Expired */}
         <section className="mt-14">

@@ -171,8 +171,7 @@ type CodesStrings = {
   expiredTitle: string; // "EXPIRED — GAME OVER"
   expiredBody: string;
   screenshotsTitle: string; // "GAME SCREENSHOTS"
-  trailerTitle: string; // "OFFICIAL TRAILER"
-  trailerNewTitle: string; // "UPDATE 2.0 TRAILER"
+  trailerTitle: string; // "UPDATE 2.0 TRAILER"
   faqTitle: string;
   faq: { q: string; a: string }[];
   menu: { ranking: string; roster: string; planner: string; rankingSub: string; rosterSub: string; plannerSub: string };
@@ -213,8 +212,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     expiredTitle: "EXPIRED — GAME OVER",
     expiredBody: "Dead codes, kept so you don't waste a turn trying them.",
     screenshotsTitle: "GAME SCREENSHOTS",
-    trailerTitle: "OFFICIAL TRAILER",
-    trailerNewTitle: "UPDATE 2.0 TRAILER",
+    trailerTitle: "UPDATE 2.0 TRAILER",
     faqTitle: "FAQ",
     faq: [
       {
@@ -275,8 +273,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     expiredTitle: "CADUCADOS — GAME OVER",
     expiredBody: "Códigos muertos, aquí para que no pierdas el tiempo probándolos.",
     screenshotsTitle: "CAPTURAS DEL JUEGO",
-    trailerTitle: "TRÁILER OFICIAL",
-    trailerNewTitle: "TRÁILER DE LA UPDATE 2.0",
+    trailerTitle: "TRÁILER DE LA UPDATE 2.0",
     faqTitle: "PREGUNTAS FRECUENTES",
     faq: [
       {
@@ -337,8 +334,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     expiredTitle: "EXPIRADOS — GAME OVER",
     expiredBody: "Códigos mortos, aqui para você não perder tempo tentando.",
     screenshotsTitle: "CAPTURAS DO JOGO",
-    trailerTitle: "TRAILER OFICIAL",
-    trailerNewTitle: "TRAILER DA UPDATE 2.0",
+    trailerTitle: "TRAILER DA UPDATE 2.0",
     faqTitle: "PERGUNTAS FREQUENTES",
     faq: [
       {
@@ -399,8 +395,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     expiredTitle: "ИСТЁКШИЕ — GAME OVER",
     expiredBody: "Мёртвые коды — оставлены, чтобы вы не тратили на них время.",
     screenshotsTitle: "СКРИНШОТЫ ИГРЫ",
-    trailerTitle: "ОФИЦИАЛЬНЫЙ ТРЕЙЛЕР",
-    trailerNewTitle: "ТРЕЙЛЕР UPDATE 2.0",
+    trailerTitle: "ТРЕЙЛЕР UPDATE 2.0",
     faqTitle: "ВОПРОСЫ И ОТВЕТЫ",
     faq: [
       {
