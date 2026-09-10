@@ -9,16 +9,41 @@ export interface GameCode {
   expires?: string; // ISO date, when a still-active code is known to expire
 }
 
-// Last verified against live sources (gamesradar + beebom + IGN + aprasi + radiotimes + joytify, cross-checked). Update on every check.
-export const LAST_VERIFIED = "2026-09-06"; // ISO date, shown as "Last verified"
-// 2026-09-03: Roblox games API still returns content-restricted/zeroed data for
-// universeId 7613921865 (votes endpoint still live: ~264K upvotes), so visits can't
-// be re-verified. Keeping the last confirmed figure.
-export const GAME_VISITS = "720M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
+// Last verified against live sources (see per-code notes). Update on every check.
+export const LAST_VERIFIED = "2026-09-10"; // ISO date, shown as "Last verified"
+// 2026-09-10: Roblox games API returns live data again for universeId 7613921865
+// (775,020,131 visits, 267,372 upvotes - 250K-likes milestone crossed; game
+// updated 2026-09-10 02:42 UTC, matching the Eclipse batch drop).
+export const GAME_VISITS = "775M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
 export const NEXT_MILESTONE_HINT =
-  "All five Update 2.0 codes died together in early September — the batch-rotation pattern means the next update (Eclipse, already teased via EclipseSoon) or the 800M-visits milestone should bring the next code batch.";
+  "The Eclipse batch landed Sep 10 (4 codes). Next watch: the 800M-visits milestone (775M now) - the batch-rotation pattern means the next update or that milestone should bring the next code batch.";
 
 export const codes: GameCode[] = [
+  // --- Eclipse batch (2026-09-10) ---
+  // Sourcing: Beebom (full list + rewards, marked NEW) + SuperCheats (partial)
+  // + Roblox API corroboration (game updated Sep 10 02:42 UTC; 250K likes
+  // crossed). Awaiting a second full aggregator (IGN/RadioTimes) - daily
+  // patrol re-checks; will be pulled immediately if contradicted.
+  {
+    code: "Eclipse",
+    reward: "50 Trait Crystals, 25 Equipment Rerolls",
+    status: "active",
+  },
+  {
+    code: "250klikes",
+    reward: "25 Trait Crystals, 25 Equipment Rerolls, 1,000 Sand Dollars",
+    status: "active",
+  },
+  {
+    code: "8thCompany",
+    reward: "50 Stat Rerolls, 25 Trait Crystals",
+    status: "active",
+  },
+  {
+    code: "EvolutionsFix",
+    reward: "25 Trait Crystals",
+    status: "active",
+  },
   // --- expired below ---
   {
     // 2026-09-06: died on schedule — gamesradar gave it a Sep 4 expiry, and
