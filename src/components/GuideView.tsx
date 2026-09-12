@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Panel, Marquee, CabinetFooter } from "@/components/crt";
 import { UNITS_VERIFIED } from "@/data/units";
+import { EDITOR, EDITOR_ROLE, SITE_URL_FULL } from "@/lib/siteMetadata";
 import { plannerGuide, intlLocale, localePath, type Locale } from "@/data/i18n";
 
 export function GuideView({ locale }: { locale: Locale }) {
@@ -27,6 +28,19 @@ export function GuideView({ locale }: { locale: Locale }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: t.guideH1,
+            dateModified: UNITS_VERIFIED,
+            author: { "@type": "Person", name: EDITOR, jobTitle: EDITOR_ROLE, url: `${SITE_URL_FULL}/about/` },
+            publisher: { "@type": "Organization", name: "Anime Expeditions Codes", url: SITE_URL_FULL },
+          }),
+        }}
+      />
       <main className="mx-auto w-full max-w-3xl px-5 py-10 sm:py-14">
         <header className="text-center">
           <h1 className="font-display text-xl leading-relaxed phosphor-green sm:text-3xl sm:leading-relaxed">
@@ -34,7 +48,7 @@ export function GuideView({ locale }: { locale: Locale }) {
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-dim">{t.guideIntro}</p>
           <p className="mt-4 font-display text-[0.55rem] text-dim">
-            {t.updated} {prettyDate.toUpperCase()}
+            BY {EDITOR.toUpperCase()} · {t.updated} {prettyDate.toUpperCase()}
           </p>
         </header>
 

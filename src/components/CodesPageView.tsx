@@ -5,6 +5,7 @@ import { Panel, Marquee } from "@/components/crt";
 import { GameMedia } from "@/components/GameMedia";
 import { ADSTERRA } from "@/data/ads";
 import { activeCodes, expiredCodes, LAST_VERIFIED, GAME_VISITS, ROBLOX_GAME_URL } from "@/data/codes";
+import { EDITOR } from "@/lib/siteMetadata";
 import { codesPage, type Locale } from "@/data/i18n";
 
 export function CodesPageView({ locale }: { locale: Locale }) {
@@ -57,7 +58,7 @@ export function CodesPageView({ locale }: { locale: Locale }) {
             <p className="mx-auto mt-6 max-w-xl text-dim">{t.intro}</p>
             <p className="mt-4 font-display text-[0.55rem] leading-relaxed text-dim">
               <span className="phosphor-green">● {t.liveLabel}</span> · {t.verified}{" "}
-              {prettyDate.toUpperCase()} · {GAME_VISITS} {t.visits}
+              BY {EDITOR.toUpperCase()} · {prettyDate.toUpperCase()} · {GAME_VISITS} {t.visits}
             </p>
           </div>
         </section>

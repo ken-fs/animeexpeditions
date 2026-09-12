@@ -27,3 +27,8 @@ export const baseMetadata: Metadata = {
   },
   robots: { index: true, follow: true },
 };
+
+/** Site editor - E-E-A-T bylines and Article schema author. */
+export const EDITOR = "Ken Lee";
+export const EDITOR_ROLE = "Editor & player-verifier";
+export const SITE_URL_FULL = SITE_URL;
