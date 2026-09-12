@@ -550,7 +550,7 @@ export const aboutPage: Loc<AboutStrings> = {
       "An independent, fan-made Anime Expeditions guide. How we verify codes, how tier rankings are decided, and what's confirmed versus reported.",
     h1: "ABOUT THIS SITE",
     intro:
-      "An independent, fan-made guide to Anime Expeditions on Roblox — built to get you a working answer fast, and honest about what's verified versus still being tested.",
+      "An independent, fan-made guide to Anime Expeditions on Roblox — built to get you a working answer fast, and honest about what's verified versus still being tested. The site is run by Ken Lee, editor and player-verifier.",
     whatTitle: "WHAT THIS IS",
     whatBody:
       "This site tracks codes, unit rankings, evolutions, traits, and game modes for Anime Expeditions. It's a small, independent project — not an official source, not run by the developer, and not affiliated with Roblox. The goal is a fast, no-clutter reference: the working code you need, the unit that actually carries, the evolution material you're missing — without ten paragraphs of filler in the way.",
@@ -582,7 +582,7 @@ export const aboutPage: Loc<AboutStrings> = {
       "Una guía independiente hecha por fans de Anime Expeditions. Cómo verificamos los códigos, cómo se decide el ranking de tiers y qué está confirmado versus reportado.",
     h1: "SOBRE ESTE SITIO",
     intro:
-      "Una guía independiente hecha por fans de Anime Expeditions en Roblox — hecha para darte una respuesta útil rápido, y honesta sobre qué está verificado y qué aún se está probando.",
+      "Una guía independiente hecha por fans de Anime Expeditions en Roblox — hecha para darte una respuesta útil rápido, y honesta sobre qué está verificado y qué aún se está probando. El sitio está a cargo de Ken Lee, editor y verificador jugador.",
     whatTitle: "QUÉ ES ESTO",
     whatBody:
       "Este sitio sigue códigos, rankings de unidades, evoluciones, traits y modos de juego de Anime Expeditions. Es un proyecto pequeño e independiente — no es una fuente oficial, no lo maneja el desarrollador y no está afiliado a Roblox. El objetivo es una referencia rápida y sin relleno: el código que funciona que necesitas, la unidad que de verdad carga, el material de evolución que te falta — sin diez párrafos de paja en medio.",
@@ -614,7 +614,7 @@ export const aboutPage: Loc<AboutStrings> = {
       "Um guia independente feito por fãs de Anime Expeditions. Como verificamos os códigos, como o ranking de tiers é decidido e o que está confirmado versus reportado.",
     h1: "SOBRE ESTE SITE",
     intro:
-      "Um guia independente feito por fãs de Anime Expeditions no Roblox — feito para te dar uma resposta útil rápido, e honesto sobre o que está verificado e o que ainda está sendo testado.",
+      "Um guia independente feito por fãs de Anime Expeditions no Roblox — feito para te dar uma resposta útil rápido, e honesto sobre o que está verificado e o que ainda está sendo testado. O site é mantido por Ken Lee, editor e verificador jogador.",
     whatTitle: "O QUE É ISTO",
     whatBody:
       "Este site acompanha códigos, rankings de unidades, evoluções, traits e modos de jogo de Anime Expeditions. É um projeto pequeno e independente — não é uma fonte oficial, não é mantido pelo desenvolvedor e não é afiliado ao Roblox. O objetivo é uma referência rápida e sem bagunça: o código que funciona que você precisa, a unidade que realmente carrega, o material de evolução que está faltando — sem dez parágrafos de enrolação no caminho.",
@@ -646,7 +646,7 @@ export const aboutPage: Loc<AboutStrings> = {
       "Независимый фанатский гайд по Anime Expeditions. Как мы проверяем коды, как решается тир-рейтинг и что подтверждено, а что лишь по данным сообщества.",
     h1: "О ЭТОМ САЙТЕ",
     intro:
-      "Независимый фанатский гайд по Anime Expeditions в Roblox — создан, чтобы быстро дать рабочий ответ, и честно говорит, что проверено, а что ещё тестируется.",
+      "Независимый фанатский гайд по Anime Expeditions в Roblox — создан, чтобы быстро дать рабочий ответ, и честно говорит, что проверено, а что ещё тестируется. Сайт ведёт Ken Lee — редактор и проверяющий игрок.",
     whatTitle: "ЧТО ЭТО ТАКОЕ",
     whatBody:
       "Этот сайт отслеживает коды, рейтинги юнитов, эволюции, трейты и режимы Anime Expeditions. Это маленький независимый проект — не официальный источник, не от разработчика и не аффилирован с Roblox. Цель — быстрый справочник без мусора: рабочий код, юнит, который реально тащит, недостающий материал эволюции — без десяти абзацев воды по пути.",
