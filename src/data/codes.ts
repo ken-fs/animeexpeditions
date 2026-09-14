@@ -25,9 +25,14 @@ export const codes: GameCode[] = [
   // crossed). Awaiting a second full aggregator (IGN/RadioTimes) - daily
   // patrol re-checks; will be pulled immediately if contradicted.
   {
+    // 2026-09-14: expiry conflict - GamesRadar + RadioTimes both printed
+    // "expires September 12", but UrGameTips + Beebom still list it active.
+    // No post-expiry in-game test exists; expires flag shows the warning
+    // while we wait for a source to re-verify either way.
     code: "Eclipse",
     reward: "50 Trait Crystals, 25 Equipment Rerolls",
     status: "active",
+    expires: "2026-09-12",
   },
   {
     code: "250klikes",
