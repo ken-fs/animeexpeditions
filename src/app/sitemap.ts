@@ -19,6 +19,7 @@ const MULTILINGUAL: { path: string; changeFrequency: "daily" | "weekly" | "month
   { path: "/fishing/", changeFrequency: "weekly", priority: 0.7 },
   { path: "/tidal-siege/", changeFrequency: "weekly", priority: 0.7 },
   { path: "/team-builder/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/trait-reroll/", changeFrequency: "weekly", priority: 0.8 },
   { path: "/maps/", changeFrequency: "monthly", priority: 0.7 },
   { path: "/game-modes/", changeFrequency: "monthly", priority: 0.6 },
   { path: "/gamepasses/", changeFrequency: "monthly", priority: 0.6 },

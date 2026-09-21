@@ -197,6 +197,225 @@ export const teamBuilderPage: Loc<TeamBuilderStrings> = {
   },
 };
 
+export interface RerollStrings {
+  metaTitle: string;
+  metaDescription: string;
+  h1: string;
+  intro: string;
+  stamp: string;
+  // Calculator UI
+  targetLabel: string;
+  targetHint: string;
+  doneLabel: string;
+  doneHint: string;
+  perReroll: string;
+  expected: string;
+  rerollsUnit: string;
+  atN: (n: number) => string;
+  pityLabel: string;
+  pityLeft: (n: number) => string;
+  pityReached: string;
+  noPity: string;
+  tableTitle: string;
+  colTrait: string;
+  colRate: string;
+  colExpected: string;
+  colPity: string;
+  colKeep: string;
+  howTitle: string;
+  howSteps: string[];
+  honestyTitle: string;
+  honestyBody: string;
+  cross: CrossText;
+}
+
+export const rerollPage: Loc<RerollStrings> = {
+  en: {
+    metaTitle: "Anime Expeditions Trait Reroll Calculator — Odds & Pity",
+    metaDescription:
+      "Work out how many Trait Crystal rerolls you need in Anime Expeditions. Real roll rates and pity thresholds for all 17 traits, with the probability maths done for you.",
+    h1: "TRAIT REROLL CALCULATOR",
+    intro:
+      "Rolling for a trait without knowing the odds is how people burn a thousand crystals and quit. Pick the trait you want and enter how many rerolls you have already spent — the maths below tells you what you are actually up against.",
+    stamp: "TRAIT DATA",
+    targetLabel: "TRAIT YOU WANT",
+    targetHint: "Pick the trait you are rolling for. Expected rerolls is the average, not a guarantee — half of players get it sooner and half later.",
+    doneLabel: "REROLLS DONE SO FAR",
+    doneHint: "Enter what you have already spent. This only affects the pity countdown — the odds per reroll never change.",
+    perReroll: "CHANCE PER REROLL",
+    expected: "EXPECTED REROLLS",
+    rerollsUnit: "rerolls",
+    atN: (n) => `Chance of hitting it within ${n} rerolls`,
+    pityLabel: "PITY COUNTDOWN",
+    pityLeft: (n) => `${n} rerolls to guaranteed`,
+    pityReached: "Pity threshold reached — the next reroll is guaranteed",
+    noPity: "No confirmed pity for this trait",
+    tableTitle: "EVERY TRAIT, RANKED BY RARITY",
+    colTrait: "Trait",
+    colRate: "Rate",
+    colExpected: "Expected rerolls",
+    colPity: "Pity",
+    colKeep: "Verdict",
+    howTitle: "HOW TO USE THIS",
+    howSteps: [
+      "Rates are per reroll and independent — a bad streak never makes the next roll more likely. Only pity changes your floor.",
+      "Expected rerolls is the average. At a 0.1% rate that is 1,000 rerolls, and roughly a third of players will still be waiting after 1,000.",
+      "Pity is the number that actually matters for planning. If a trait has a pity threshold, your worst case is that number — not infinity.",
+      "Budget for pity, not for luck. If you are not willing to reach the pity count, treat the trait as unavailable to you.",
+    ],
+    honestyTitle: "ABOUT THESE NUMBERS",
+    honestyBody:
+      "Rates and pity thresholds are community-reported and cross-checked against public third-party tables — they are not published by the developer. Treat them as close enough to plan with, and confirm in-client before spending a large crystal stack.",
+    cross: {
+      before: "Not sure which trait is worth the crystals? See the ",
+      links: [
+        { label: "trait list", path: "/traits/" },
+        { label: "unit tier list", path: "/tier-list/" },
+      ],
+      between: [" to match traits to the units you actually run, then check the "],
+      after: " for the rest of your loadout.",
+    },
+  },
+  es: {
+    metaTitle: "Calculadora de Rerolls de Traits — Anime Expeditions",
+    metaDescription:
+      "Calcula cuántos rerolls de Trait Crystals necesitas en Anime Expeditions. Tasas reales y umbrales de pity para los 17 traits, con las probabilidades ya hechas.",
+    h1: "CALCULADORA DE REROLLS",
+    intro:
+      "Tirar traits sin saber las probabilidades es como la gente quema mil cristales y lo deja. Elige el trait que buscas e introduce cuántos rerolls llevas: los números de abajo te dicen a qué te enfrentas de verdad.",
+    stamp: "DATOS DE TRAITS",
+    targetLabel: "TRAIT QUE QUIERES",
+    targetHint: "Elige el trait por el que estás tirando. Los rerolls esperados son la media, no una garantía: la mitad lo consigue antes y la mitad después.",
+    doneLabel: "REROLLS YA HECHOS",
+    doneHint: "Introduce lo que llevas gastado. Esto solo afecta a la cuenta atrás del pity — las probabilidades por tirada no cambian nunca.",
+    perReroll: "PROBABILIDAD POR TIRADA",
+    expected: "REROLLS ESPERADOS",
+    rerollsUnit: "rerolls",
+    atN: (n) => `Probabilidad de conseguirlo en ${n} rerolls`,
+    pityLabel: "CUENTA ATRÁS DEL PITY",
+    pityLeft: (n) => `${n} rerolls para garantizado`,
+    pityReached: "Umbral de pity alcanzado — la próxima tirada está garantizada",
+    noPity: "Sin pity confirmado para este trait",
+    tableTitle: "TODOS LOS TRAITS, POR RAREZA",
+    colTrait: "Trait",
+    colRate: "Tasa",
+    colExpected: "Rerolls esperados",
+    colPity: "Pity",
+    colKeep: "Veredicto",
+    howTitle: "CÓMO USARLO",
+    howSteps: [
+      "Las tasas son por tirada e independientes: una mala racha nunca hace más probable la siguiente. Solo el pity cambia tu suelo.",
+      "Los rerolls esperados son la media. A una tasa del 0,1% son 1.000 rerolls, y cerca de un tercio de los jugadores seguirá esperando después de 1.000.",
+      "El pity es el número que importa para planificar. Si un trait tiene umbral, tu peor caso es ese número, no el infinito.",
+      "Presupuesta para el pity, no para la suerte. Si no estás dispuesto a llegar al pity, considera ese trait fuera de tu alcance.",
+    ],
+    honestyTitle: "SOBRE ESTOS NÚMEROS",
+    honestyBody:
+      "Las tasas y los umbrales de pity son datos reportados por la comunidad y contrastados con tablas públicas de terceros — no los publica el desarrollador. Úsalos como referencia para planificar y confírmalos en el juego antes de gastar un montón grande de cristales.",
+    cross: {
+      before: "¿No sabes qué trait merece los cristales? Mira la ",
+      links: [
+        { label: "lista de traits", path: "/traits/" },
+        { label: "tier list de unidades", path: "/tier-list/" },
+      ],
+      between: [" para emparejar traits con las unidades que usas, y luego revisa el "],
+      after: " para el resto de tu equipo.",
+    },
+  },
+  pt: {
+    metaTitle: "Calculadora de Rerolls de Traits — Anime Expeditions",
+    metaDescription:
+      "Calcule quantos rerolls de Trait Crystals você precisa no Anime Expeditions. Taxas reais e limites de pity para os 17 traits, com a matemática já feita.",
+    h1: "CALCULADORA DE REROLLS",
+    intro:
+      "Rolar traits sem saber as chances é como as pessoas queimam mil cristais e desistem. Escolha o trait que você quer e informe quantos rerolls já gastou — os números abaixo mostram o que você realmente enfrenta.",
+    stamp: "DADOS DE TRAITS",
+    targetLabel: "TRAIT QUE VOCÊ QUER",
+    targetHint: "Escolha o trait que está buscando. Os rerolls esperados são a média, não uma garantia: metade consegue antes e metade depois.",
+    doneLabel: "REROLLS JÁ FEITOS",
+    doneHint: "Informe o que já gastou. Isso afeta apenas a contagem do pity — as chances por rolagem nunca mudam.",
+    perReroll: "CHANCE POR ROLAGEM",
+    expected: "REROLLS ESPERADOS",
+    rerollsUnit: "rerolls",
+    atN: (n) => `Chance de conseguir em ${n} rerolls`,
+    pityLabel: "CONTAGEM DO PITY",
+    pityLeft: (n) => `${n} rerolls para garantido`,
+    pityReached: "Limite de pity atingido — a próxima rolagem é garantida",
+    noPity: "Sem pity confirmado para este trait",
+    tableTitle: "TODOS OS TRAITS, POR RARIDADE",
+    colTrait: "Trait",
+    colRate: "Taxa",
+    colExpected: "Rerolls esperados",
+    colPity: "Pity",
+    colKeep: "Veredito",
+    howTitle: "COMO USAR",
+    howSteps: [
+      "As taxas são por rolagem e independentes — uma sequência ruim nunca torna a próxima mais provável. Só o pity muda o seu piso.",
+      "Rerolls esperados é a média. A uma taxa de 0,1% são 1.000 rerolls, e cerca de um terço dos jogadores ainda estará esperando depois disso.",
+      "O pity é o número que importa para planejar. Se um trait tem limite, seu pior caso é esse número, não o infinito.",
+      "Orce pelo pity, não pela sorte. Se você não está disposto a chegar ao pity, trate o trait como indisponível.",
+    ],
+    honestyTitle: "SOBRE ESTES NÚMEROS",
+    honestyBody:
+      "As taxas e os limites de pity são dados relatados pela comunidade e conferidos com tabelas públicas de terceiros — não são publicados pelo desenvolvedor. Use como referência para planejar e confirme no jogo antes de gastar uma pilha grande de cristais.",
+    cross: {
+      before: "Não sabe qual trait merece os cristais? Veja a ",
+      links: [
+        { label: "lista de traits", path: "/traits/" },
+        { label: "tier list de unidades", path: "/tier-list/" },
+      ],
+      between: [" para combinar traits com as unidades que você usa, e depois confira o "],
+      after: " para o resto do seu time.",
+    },
+  },
+  ru: {
+    metaTitle: "Калькулятор Рероллов Трейтов — Anime Expeditions",
+    metaDescription:
+      "Посчитайте, сколько рероллов Trait Crystals нужно в Anime Expeditions. Реальные шансы и пороги pity для всех 17 трейтов — математика уже сделана за вас.",
+    h1: "КАЛЬКУЛЯТОР РЕРОЛЛОВ ТРЕЙТОВ",
+    intro:
+      "Крутить трейты, не зная шансов, — так люди сжигают тысячу кристаллов и бросают игру. Выберите нужный трейт и укажите, сколько рероллов уже потрачено: цифры ниже показывают, против чего вы на самом деле играете.",
+    stamp: "ДАННЫЕ ТРЕЙТОВ",
+    targetLabel: "НУЖНЫЙ ТРЕЙТ",
+    targetHint: "Выберите трейт, который крутите. Ожидаемые рероллы — это среднее, а не гарантия: половина получит раньше, половина позже.",
+    doneLabel: "УЖЕ СДЕЛАНО РЕРОЛЛОВ",
+    doneHint: "Укажите, сколько уже потратили. Это влияет только на отсчёт pity — шанс за реролл не меняется никогда.",
+    perReroll: "ШАНС ЗА РЕРОЛЛ",
+    expected: "ОЖИДАЕМЫХ РЕРОЛЛОВ",
+    rerollsUnit: "рероллов",
+    atN: (n) => `Шанс получить за ${n} рероллов`,
+    pityLabel: "ОТСЧЁТ PITY",
+    pityLeft: (n) => `${n} рероллов до гарантии`,
+    pityReached: "Порог pity достигнут — следующий реролл гарантирован",
+    noPity: "Pity для этого трейта не подтверждён",
+    tableTitle: "ВСЕ ТРЕЙТЫ ПО РЕДКОСТИ",
+    colTrait: "Трейт",
+    colRate: "Шанс",
+    colExpected: "Ожидаемо рероллов",
+    colPity: "Pity",
+    colKeep: "Вердикт",
+    howTitle: "КАК ЭТО ЧИТАТЬ",
+    howSteps: [
+      "Шансы считаются за реролл и независимы — плохая серия никогда не повышает шанс следующего. Пол меняет только pity.",
+      "Ожидаемые рероллы — это среднее. При шансе 0,1% это 1 000 рероллов, и примерно треть игроков всё ещё будет ждать после этого.",
+      "Pity — то число, которое реально важно для планирования. Если у трейта есть порог, ваш худший случай — этот порог, а не бесконечность.",
+      "Считайте бюджет по pity, а не по удаче. Если не готовы дойти до pity — считайте трейт недоступным.",
+    ],
+    honestyTitle: "ОБ ЭТИХ ЧИСЛАХ",
+    honestyBody:
+      "Шансы и пороги pity — данные сообщества, сверенные с публичными сторонними таблицами; разработчик их не публикует. Используйте как ориентир для планирования и проверяйте в игре перед тем, как тратить большой запас кристаллов.",
+    cross: {
+      before: "Не уверены, какой трейт стоит кристаллов? Смотрите ",
+      links: [
+        { label: "список трейтов", path: "/traits/" },
+        { label: "тир-лист юнитов", path: "/tier-list/" },
+      ],
+      between: [" чтобы сопоставить трейты с юнитами, которых вы водите, затем "],
+      after: " для остальной части сборки.",
+    },
+  },
+};
+
 export const checklistPage: Loc<ChecklistStrings> = {
   en: {
     metaTitle: "Anime Expeditions Daily Checklist — Dailies & Weeklies Tracker",

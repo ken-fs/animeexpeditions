@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/evolution-planner/", label: "PLANNER" },
   { href: "/beginner-guide/", label: "GUIDE" },
   { href: "/team-builder/", label: "TEAM" },
+  { href: "/trait-reroll/", label: "REROLL" },
   { href: "/daily-checklist/", label: "DAILY" },
   { href: "/traits/", label: "TRAITS" },
   { href: "/maps/", label: "MAPS" },
