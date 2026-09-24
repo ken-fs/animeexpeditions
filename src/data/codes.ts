@@ -10,7 +10,10 @@ export interface GameCode {
 }
 
 // Last verified against live sources (see per-code notes). Update on every check.
-export const LAST_VERIFIED = "2026-09-10"; // ISO date, shown as "Last verified"
+// Last verified: 2026-09-24 patrol — Beebom re-check. Eclipse batch
+// (Eclipse/250klikes/8thCompany/EvolutionsFix) confirmed expired; restartsorry!
+// added from Beebom (NEW). GameRant/RadioTimes direction agrees on the batch.
+export const LAST_VERIFIED = "2026-09-24";
 // 2026-09-10: Roblox games API returns live data again for universeId 7613921865
 // (775,020,131 visits, 267,372 upvotes - 250K-likes milestone crossed; game
 // updated 2026-09-10 02:42 UTC, matching the Eclipse batch drop).
@@ -25,27 +28,39 @@ export const codes: GameCode[] = [
   // crossed). Awaiting a second full aggregator (IGN/RadioTimes) - daily
   // patrol re-checks; will be pulled immediately if contradicted.
   {
-    // 2026-09-14: expiry conflict - GamesRadar + RadioTimes both printed
-    // "expires September 12", but UrGameTips + Beebom still list it active.
-    // No post-expiry in-game test exists; expires flag shows the warning
-    // while we wait for a source to re-verify either way.
+    // 2026-09-24: settled expired. The Sep 12 expiry GamesRadar/RadioTimes
+    // printed turned out right - Beebom now lists Eclipse expired; GameRant
+    // and RadioTimes both dropped it from active lists. Patrol-verified.
     code: "Eclipse",
     reward: "50 Trait Crystals, 25 Equipment Rerolls",
-    status: "active",
-    expires: "2026-09-12",
+    status: "expired",
   },
   {
+    // 2026-09-24: Beebom now marks it expired; GameRant/RadioTimes dropped it
+    // from active lists. Eclipse batch fully rotated out.
     code: "250klikes",
     reward: "25 Trait Crystals, 25 Equipment Rerolls, 1,000 Sand Dollars",
-    status: "active",
+    status: "expired",
   },
   {
+    // 2026-09-24: Beebom now marks it expired; GameRant/RadioTimes dropped it
+    // from active lists. Eclipse batch fully rotated out.
     code: "8thCompany",
     reward: "50 Stat Rerolls, 25 Trait Crystals",
-    status: "active",
+    status: "expired",
   },
   {
+    // 2026-09-24: Beebom now marks it expired; GameRant/RadioTimes dropped it
+    // from active lists. Eclipse batch fully rotated out.
     code: "EvolutionsFix",
+    reward: "25 Trait Crystals",
+    status: "expired",
+  },
+  {
+    // 2026-09-24: new drop — Beebom (NEW). Compensates the restart bug;
+    // awaiting a second source per the 2-source rule, listed active on
+    // Beebom's fresh re-check with the Eclipse batch confirmed gone.
+    code: "restartsorry!",
     reward: "25 Trait Crystals",
     status: "active",
   },
