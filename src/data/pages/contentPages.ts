@@ -311,9 +311,9 @@ export const traitsPage: Loc<TraitsStrings> = {
 
 export const updatesPage: Loc<UpdatesStrings> = {
   en: {
-    metaTitle: "Anime Expeditions Updates — Patch Notes & Event Windows",
+    metaTitle: "Anime Expeditions Updates — Update 3.0 Patch Notes & Events (Sep 2026)",
     metaDescription:
-      "Every Anime Expeditions update and event window, newest first: new units, limited modes like Villain Invasion, cosmetics, and fixes. Dates from the official Roblox schedule.",
+      "Every Anime Expeditions update, newest first — Update 3.0 (Sep 25) with Boss Rush and new units, plus event windows, limited modes, cosmetics and fixes.",
     h1: "ANIME EXPEDITIONS UPDATES",
     intro:
       "Every update and event window, newest first — new units, limited modes, cosmetics, and fixes. Event maps like Villain Invasion are time-limited, so check the window before you plan around them.",
@@ -334,9 +334,9 @@ export const updatesPage: Loc<UpdatesStrings> = {
     },
   },
   es: {
-    metaTitle: "Actualizaciones de Anime Expeditions — Parches y Ventanas de Eventos",
+    metaTitle: "Actualizaciones de Anime Expeditions — Update 3.0 y Parches (Sep 2026)",
     metaDescription:
-      "Todas las actualizaciones y ventanas de eventos de Anime Expeditions, de la más nueva a la más vieja: unidades nuevas, modos limitados como Villain Invasion, cosméticos y arreglos. Fechas del calendario oficial de Roblox.",
+      "Todas las actualizaciones de Anime Expeditions, de la más nueva a la más vieja — Update 3.0 (25 sep) con Boss Rush y unidades nuevas, más ventanas de eventos, modos limitados, cosméticos y arreglos.",
     h1: "ACTUALIZACIONES DE ANIME EXPEDITIONS",
     intro:
       "Cada actualización y ventana de evento, de la más nueva a la más vieja — unidades nuevas, modos limitados, cosméticos y arreglos. Los mapas de evento como Villain Invasion son por tiempo limitado, así que revisa la ventana antes de planear con ellos.",
@@ -357,9 +357,9 @@ export const updatesPage: Loc<UpdatesStrings> = {
     },
   },
   pt: {
-    metaTitle: "Atualizações de Anime Expeditions — Notas de Patch e Janelas de Eventos",
+    metaTitle: "Atualizações de Anime Expeditions — Update 3.0 e Patches (Set 2026)",
     metaDescription:
-      "Todas as atualizações e janelas de eventos de Anime Expeditions, da mais nova à mais antiga: unidades novas, modos limitados como Villain Invasion, cosméticos e correções. Datas do calendário oficial do Roblox.",
+      "Todas as atualizações de Anime Expeditions, da mais nova à mais antiga — Update 3.0 (25 set) com Boss Rush e unidades novas, além de janelas de eventos, modos limitados, cosméticos e correções.",
     h1: "ATUALIZAÇÕES DE ANIME EXPEDITIONS",
     intro:
       "Cada atualização e janela de evento, da mais nova à mais antiga — unidades novas, modos limitados, cosméticos e correções. Mapas de evento como Villain Invasion são por tempo limitado, então confira a janela antes de planejar com eles.",
@@ -380,9 +380,9 @@ export const updatesPage: Loc<UpdatesStrings> = {
     },
   },
   ru: {
-    metaTitle: "Обновления Anime Expeditions — Патчноуты и Окна Событий",
+    metaTitle: "Обновления Anime Expeditions — Update 3.0 и патчноуты (сен 2026)",
     metaDescription:
-      "Все обновления и окна событий Anime Expeditions, от новых к старым: новые юниты, ограниченные режимы вроде Villain Invasion, косметика и исправления. Даты из официального расписания Roblox.",
+      "Все обновления Anime Expeditions, от новых к старым — Update 3.0 (25 сен) с Boss Rush и новыми юнитами, а также окна событий, ограниченные режимы, косметика и исправления.",
     h1: "ОБНОВЛЕНИЯ ANIME EXPEDITIONS",
     intro:
       "Каждое обновление и окно события, от новых к старым — новые юниты, ограниченные режимы, косметика и исправления. Ивентовые карты вроде Villain Invasion временные, так что проверяйте окно, прежде чем строить планы.",

@@ -3,9 +3,9 @@ import { hreflangAlternates } from "@/lib/seo";
 import { UpdatesView } from "@/components/UpdatesView";
 
 export const metadata: Metadata = {
-  title: "Anime Expeditions Updates — Patch Notes & Event Windows",
+  title: "Anime Expeditions Updates — Update 3.0 Patch Notes & Events (Sep 2026)",
   description:
-    "Every Anime Expeditions update and event window, newest first: new units, limited modes like Villain Invasion, cosmetics, and fixes. Dates from the official Roblox schedule.",
+    "Every Anime Expeditions update, newest first — Update 3.0 (Sep 25) with Boss Rush and new units, plus event windows, limited modes, cosmetics and fixes.",
   alternates: { canonical: "https://animeexpeditions.dev/updates/" },
 };
 

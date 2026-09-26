@@ -7,7 +7,7 @@
 
 import type { Locale } from "./i18n";
 
-export const UPDATES_VERIFIED = "2026-09-03";
+export const UPDATES_VERIFIED = "2026-09-26";
 
 export interface GameUpdate {
   version: string; // e.g. "Update 1.0"
@@ -19,6 +19,37 @@ export interface GameUpdate {
 }
 
 export const updates: GameUpdate[] = [
+  {
+    version: "Update 3.0",
+    date: "Released Sep 25, 2026",
+    status: "provisional", // official changelog's 3.0 entry is still a placeholder (identical to 2.5); details below come from creator coverage + the code batch
+    highlights: [
+      "New Boss Rush mode - a boss-focused mode added with the update (creator coverage, Sep 25). Exact rules and rewards are still being documented.",
+      "New units: creator coverage names Shinra, Sho, Benimaru and Tobirama - the banner pulls the first post-update videos chased. Stats and evolutions get folded into the units page and tier list as they are documented.",
+      "Four codes landed with the update: Bossrush, Hellfire, Update3 and RDC26 - the first batch to include the update's own name.",
+      "The game updated Sep 25, 2026 (20:08 UTC), at 795M visits. The official changelog's Update 3.0 entry is still a placeholder, so this entry tracks creator coverage until first-party notes publish.",
+    ],
+    highlightsI18n: {
+      es: [
+        "Nuevo modo Boss Rush - un modo centrado en jefes a\u00f1adido con la actualizaci\u00f3n (cobertura de creadores, 25 sep). Las reglas y recompensas exactas siguen document\u00e1ndose.",
+        "Nuevas unidades: la cobertura de creadores nombra a Shinra, Sho, Benimaru y Tobirama - los pulls de banner que persiguieron los primeros v\u00eddeos tras la actualizaci\u00f3n. Sus stats y evoluciones se a\u00f1adir\u00e1n a la p\u00e1gina de unidades y al tier list a medida que se documenten.",
+        "Cuatro c\u00f3digos llegaron con la actualizaci\u00f3n: Bossrush, Hellfire, Update3 y RDC26 - el primer lote que incluye el nombre de la propia actualizaci\u00f3n.",
+        "El juego se actualiz\u00f3 el 25 de septiembre de 2026 (20:08 UTC), con 795M de visitas. La entrada de Update 3.0 en el changelog oficial sigue siendo un placeholder, as\u00ed que esta entrada sigue la cobertura de creadores hasta que se publiquen notas de primera mano.",
+      ],
+      pt: [
+        "Novo modo Boss Rush - um modo focado em chefes adicionado com a atualiza\u00e7\u00e3o (cobertura de criadores, 25 set). Regras e recompensas exatas ainda est\u00e3o sendo documentadas.",
+        "Novas unidades: a cobertura de criadores cita Shinra, Sho, Benimaru e Tobirama - os pulls de banner perseguidos pelos primeiros v\u00eddeos ap\u00f3s a atualiza\u00e7\u00e3o. Stats e evolu\u00e7\u00f5es entram na p\u00e1gina de unidades e no tier list conforme forem documentados.",
+        "Quatro c\u00f3digos chegaram com a atualiza\u00e7\u00e3o: Bossrush, Hellfire, Update3 e RDC26 - o primeiro lote a incluir o nome da pr\u00f3pria atualiza\u00e7\u00e3o.",
+        "O jogo foi atualizado em 25 de setembro de 2026 (20:08 UTC), com 795M de visitas. A entrada de Update 3.0 no changelog oficial ainda \u00e9 um placeholder, ent\u00e3o esta entrada acompanha a cobertura de criadores at\u00e9 que notas de primeira m\u00e3o sejam publicadas.",
+      ],
+      ru: [
+        "\u041d\u043e\u0432\u044b\u0439 \u0440\u0435\u0436\u0438\u043c Boss Rush - \u0440\u0435\u0436\u0438\u043c, \u043f\u043e\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 \u0432\u043e\u043a\u0440\u0443\u0433 \u0431\u043e\u0441\u0441\u043e\u0432, \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d \u0432\u043c\u0435\u0441\u0442\u0435 \u0441 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435\u043c (\u043f\u043e \u043e\u0431\u0437\u043e\u0440\u0430\u043c \u0441\u043e\u0437\u0434\u0430\u0442\u0435\u043b\u0435\u0439, 25 \u0441\u0435\u043d). \u0422\u043e\u0447\u043d\u044b\u0435 \u043f\u0440\u0430\u0432\u0438\u043b\u0430 \u0438 \u043d\u0430\u0433\u0440\u0430\u0434\u044b \u0435\u0449\u0451 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438\u0440\u0443\u044e\u0442\u0441\u044f.",
+        "\u041d\u043e\u0432\u044b\u0435 \u044e\u043d\u0438\u0442\u044b: \u0432 \u043e\u0431\u0437\u043e\u0440\u0430\u0445 \u0441\u043e\u0437\u0434\u0430\u0442\u0435\u043b\u0435\u0439 \u043d\u0430\u0437\u0432\u0430\u043d\u044b Shinra, Sho, Benimaru \u0438 Tobirama - \u0438\u043c\u0435\u043d\u043d\u043e \u0438\u0445 \u0432\u044b\u0431\u0438\u0432\u0430\u043b\u0438 \u0432 \u043f\u0435\u0440\u0432\u044b\u0445 \u0432\u0438\u0434\u0435\u043e \u043f\u043e\u0441\u043b\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f. \u0421\u0442\u0430\u0442\u044b \u0438 \u044d\u0432\u043e\u043b\u044e\u0446\u0438\u0438 \u0434\u043e\u0431\u0430\u0432\u044f\u0442\u0441\u044f \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u044e\u043d\u0438\u0442\u043e\u0432 \u0438 \u0432 \u0442\u0438\u0440-\u043b\u0438\u0441\u0442 \u043f\u043e \u043c\u0435\u0440\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f.",
+        "\u0412\u043c\u0435\u0441\u0442\u0435 \u0441 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435\u043c \u0432\u044b\u0448\u043b\u043e \u0447\u0435\u0442\u044b\u0440\u0435 \u043a\u043e\u0434\u0430: Bossrush, Hellfire, Update3 \u0438 RDC26 - \u043f\u0435\u0440\u0432\u044b\u0439 \u043d\u0430\u0431\u043e\u0440, \u0432\u043a\u043b\u044e\u0447\u0430\u044e\u0449\u0438\u0439 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0430\u043c\u043e\u0433\u043e \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f.",
+        "\u0418\u0433\u0440\u0430 \u043e\u0431\u043d\u043e\u0432\u0438\u043b\u0430\u0441\u044c 25 \u0441\u0435\u043d\u0442\u044f\u0431\u0440\u044f 2026 (20:08 UTC) \u043f\u0440\u0438 795M \u0432\u0438\u0437\u0438\u0442\u043e\u0432. \u0417\u0430\u043f\u0438\u0441\u044c Update 3.0 \u0432 \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u043c \u0447\u0435\u0439\u043d\u0434\u0436\u043b\u043e\u0433\u0435 \u0432\u0441\u0451 \u0435\u0449\u0451 \u0437\u0430\u0433\u043b\u0443\u0448\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0437\u0434\u0435\u0441\u044c \u043c\u044b \u043e\u043f\u0438\u0440\u0430\u0435\u043c\u0441\u044f \u043d\u0430 \u043e\u0431\u0437\u043e\u0440\u044b \u0441\u043e\u0437\u0434\u0430\u0442\u0435\u043b\u0435\u0439 \u0434\u043e \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438 \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0445 \u0437\u0430\u043c\u0435\u0442\u043e\u043a.",
+      ],
+    },
+  },
   {
     version: "Update 2.0",
     title: "Summer Siege",
