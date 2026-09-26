@@ -10,18 +10,47 @@ export interface GameCode {
 }
 
 // Last verified against live sources (see per-code notes). Update on every check.
-// Last verified: 2026-09-24 patrol — Beebom re-check. Eclipse batch
-// (Eclipse/250klikes/8thCompany/EvolutionsFix) confirmed expired; restartsorry!
-// added from Beebom (NEW). GameRant/RadioTimes direction agrees on the batch.
-export const LAST_VERIFIED = "2026-09-24";
-// 2026-09-10: Roblox games API returns live data again for universeId 7613921865
-// (775,020,131 visits, 267,372 upvotes - 250K-likes milestone crossed; game
-// updated 2026-09-10 02:42 UTC, matching the Eclipse batch drop).
-export const GAME_VISITS = "775M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
+// Last verified: 2026-09-26 — Beebom (dateModified 09-26) + UrGameTips (09-25)
+// both list the same four new codes (Bossrush/Hellfire/Update3/RDC26) and both
+// moved restartsorry! to expired. 2-source rule satisfied for the batch.
+// Watch item: Beebom's expired list also shows `fastrestart!`, a code we have
+// never tracked (TryHardGuides lists it too, but with a stale active list).
+// Verify against a second fresh source before adding it here.
+export const LAST_VERIFIED = "2026-09-26";
+// 2026-09-26: Roblox games API for universeId 7613921865 — 795,232,103 visits;
+// game updated 2026-09-25 20:08 UTC (the update that carried the Update 3 batch).
+export const GAME_VISITS = "795M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
 export const NEXT_MILESTONE_HINT =
-  "The Eclipse batch landed Sep 10 (4 codes). Next watch: the 800M-visits milestone (775M now) - the batch-rotation pattern means the next update or that milestone should bring the next code batch.";
+  "The Update 3 batch landed Sep 25 (4 codes). Next watch: the 800M-visits milestone (795M now) - the batch-rotation pattern means that milestone should bring the next code batch.";
 
 export const codes: GameCode[] = [
+  // --- Update 3 batch (2026-09-25) ---
+  // Sourcing: Beebom (dateModified 2026-09-26, all four marked NEW) + UrGameTips
+  // (2026-09-25: "we added Bossrush, Update3, RDC26, Hellfire; we moved
+  // restartsorry! to the expired list"). Neither source itemizes rewards yet,
+  // so the reward column stays generic rather than inventing numbers — daily
+  // patrol fills it in when a source publishes the list. Roblox API corroborates
+  // the drop: game updated 2026-09-25 20:08 UTC, visits 775M -> 795M.
+  {
+    code: "Bossrush",
+    reward: "Free rewards",
+    status: "active",
+  },
+  {
+    code: "Hellfire",
+    reward: "Free rewards",
+    status: "active",
+  },
+  {
+    code: "Update3",
+    reward: "Free rewards",
+    status: "active",
+  },
+  {
+    code: "RDC26",
+    reward: "Free rewards",
+    status: "active",
+  },
   // --- Eclipse batch (2026-09-10) ---
   // Sourcing: Beebom (full list + rewards, marked NEW) + SuperCheats (partial)
   // + Roblox API corroboration (game updated Sep 10 02:42 UTC; 250K likes
@@ -57,12 +86,12 @@ export const codes: GameCode[] = [
     status: "expired",
   },
   {
-    // 2026-09-24: new drop — Beebom (NEW). Compensates the restart bug;
-    // awaiting a second source per the 2-source rule, listed active on
-    // Beebom's fresh re-check with the Eclipse batch confirmed gone.
+    // 2026-09-26: moved to expired — Beebom + UrGameTips both retired it when
+    // the Update 3 batch landed. Survived ~2 days (added Sep 24, expired by
+    // Sep 26), in line with this game's rapid rotation (Eclipse: Sep 10 -> 12).
     code: "restartsorry!",
     reward: "25 Trait Crystals",
-    status: "active",
+    status: "expired",
   },
   // --- expired below ---
   {

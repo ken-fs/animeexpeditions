@@ -204,7 +204,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     copy: "COPY",
     nextUp: "NEXT UP:",
     nextUpBody:
-      "Update 2.0 [Summer Siege] landed Aug 31 with fresh codes, an Eclipse update is already teased, and the 800M visits milestone is still ahead — all prime spots for new codes.",
+      "Four new codes landed with the 25 September update — Bossrush, Hellfire, Update3 and RDC26 — and the game sits at 795M visits, so the 800M milestone is the next likely drop.",
     howTitle: "HOW TO REDEEM",
     steps: [
       "Open Anime Expeditions on Roblox.",
@@ -230,7 +230,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "When do new Anime Expeditions codes come out?",
-        a: "New codes usually land at visit, like, and concurrent-player milestones, or with big updates. The game is past 700M visits and Update 2.0 just dropped its own codes — watch for an 800mvisits code and the teased Eclipse update.",
+        a: "New codes usually land at visit, like, and concurrent-player milestones, or with big updates. The 25 September update brought four at once, and with the game at 795M visits, the 800M milestone is the next likely drop.",
       },
     ],
     menu: {
@@ -265,7 +265,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     copy: "COPIAR",
     nextUp: "PRÓXIMO:",
     nextUpBody:
-      "Update 2.0 [Summer Siege] llegó el 31 de agosto con códigos nuevos, ya se anuncia una actualización Eclipse y el hito de 800M visitas sigue pendiente — todos son momentos clave para nuevos códigos.",
+      "La actualización del 25 de septiembre trajo cuatro códigos nuevos — Bossrush, Hellfire, Update3 y RDC26 — y el juego ya está en 795M de visitas: el hito de 800M es la próxima ocasión probable.",
     howTitle: "CÓMO CANJEAR",
     steps: [
       "Abre Anime Expeditions en Roblox.",
@@ -291,7 +291,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "¿Cuándo salen nuevos códigos de Anime Expeditions?",
-        a: "Los códigos suelen salir en hitos de visitas, likes y jugadores conectados, o con grandes actualizaciones. El juego supera los 700M de visitas y Update 2.0 ya trajo sus propios códigos — atento a un código 800mvisits y a la anunciada actualización Eclipse.",
+        a: "Los códigos suelen salir en hitos de visitas, likes y jugadores conectados, o con grandes actualizaciones. La actualización del 25 de septiembre trajo cuatro de golpe, y con el juego en 795M de visitas, el hito de 800M es la próxima ocasión probable.",
       },
     ],
     menu: {
@@ -326,7 +326,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     copy: "COPIAR",
     nextUp: "A SEGUIR:",
     nextUpBody:
-      "Update 2.0 [Summer Siege] chegou em 31 de agosto com códigos novos, uma atualização Eclipse já foi anunciada e a meta de 800M visitas ainda está por vir — todas são ótimas chances de códigos novos.",
+      "A atualização de 25 de setembro trouxe quatro códigos novos — Bossrush, Hellfire, Update3 e RDC26 — e o jogo está em 795M de visitas: a meta de 800M é a próxima chance provável.",
     howTitle: "COMO RESGATAR",
     steps: [
       "Abra Anime Expeditions no Roblox.",
@@ -352,7 +352,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "Quando saem novos códigos de Anime Expeditions?",
-        a: "Os códigos costumam sair em metas de visitas, likes e jogadores online, ou com grandes atualizações. O jogo passou de 700M de visitas e a Update 2.0 já trouxe seus próprios códigos — fique de olho em um código 800mvisits e na anunciada atualização Eclipse.",
+        a: "Os códigos costumam sair em metas de visitas, likes e jogadores online, ou com grandes atualizações. A atualização de 25 de setembro trouxe quatro de uma vez, e com o jogo em 795M de visitas, a meta de 800M é a próxima chance provável.",
       },
     ],
     menu: {
@@ -387,7 +387,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
     copy: "КОПИЯ",
     nextUp: "ДАЛЕЕ:",
     nextUpBody:
-      "Update 2.0 [Summer Siege] вышла 31 августа с новыми кодами, обновление Eclipse уже анонсировано, а отметка 800M визитов всё ещё впереди — всё это лучшее время для новых кодов.",
+      "Обновление от 25 сентября принесло сразу четыре кода — Bossrush, Hellfire, Update3 и RDC26 — а игра уже на 795M визитов: отметка 800M — следующий вероятный повод.",
     howTitle: "КАК АКТИВИРОВАТЬ",
     steps: [
       "Откройте Anime Expeditions в Roblox.",
@@ -413,7 +413,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
       },
       {
         q: "Когда выходят новые коды Anime Expeditions?",
-        a: "Коды обычно выходят на отметках по визитам, лайкам и онлайну или с крупными обновлениями. У игры уже больше 700M визитов, а Update 2.0 принесла свои коды — ждём код 800mvisits и анонсированное обновление Eclipse.",
+        a: "Коды обычно выходят на отметках по визитам, лайкам и онлайну или с крупными обновлениями. Обновление от 25 сентября принесло сразу четыре, а при 795M визитов следующая вероятная остановка — отметка 800M.",
       },
       {
         q: "Как правильно пишется название игры по-русски?",
