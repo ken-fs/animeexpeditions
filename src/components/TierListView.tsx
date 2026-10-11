@@ -9,6 +9,8 @@ const TIER_PHOSPHOR: Record<Tier, "amber" | "cyan" | "green" | "magenta"> = {
   S: "amber",
   A: "cyan",
   B: "green",
+  C: "green",
+  D: "magenta",
   Watch: "magenta",
 };
 

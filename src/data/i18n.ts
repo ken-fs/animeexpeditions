@@ -46,7 +46,7 @@ type TierUnitsStrings = {
   base: string;
   role: string;
   evolve: string;
-  tierLabels: { SS: string; "S+": string; S: string; A: string; B: string; Watch: string };
+  tierLabels: { SS: string; "S+": string; S: string; A: string; B: string; C: string; D: string; Watch: string };
   // cross-link sentence pieces
   seeRosterPre: string; // "Want each unit's evolution and materials? Open the "
   rosterLink: string; // "unit roster"
@@ -57,7 +57,7 @@ type TierUnitsStrings = {
 
 export const tierUnits: Record<Locale, TierUnitsStrings> = {
   en: {
-    tierMetaTitle: "Anime Expeditions Tier List (September 2026) — Best Units Ranked",
+    tierMetaTitle: "Anime Expeditions Tier List (October 2026) — Best Units Ranked",
     tierMetaDesc:
       "The best Anime Expeditions units ranked S to B tier by role — DPS, support, control and AoE — for Story, Expeditions and raids. Updated for the current meta.",
     tierH1: "TIER RANKING",
@@ -73,7 +73,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "BASE",
     role: "ROLE",
     evolve: "EVOLVE",
-    tierLabels: { SS: "SS TIER — TOP OF THE META", "S+": "S+ TIER — NEAR BEST IN SLOT", S: "S TIER — BEST IN SLOT", A: "A TIER — STRONG PICKS", B: "B TIER — SITUATIONAL", Watch: "WATCH — PROMISING, UNPROVEN" },
+    tierLabels: { SS: "SS TIER — TOP OF THE META", "S+": "S+ TIER — NEAR BEST IN SLOT", S: "S TIER — BEST IN SLOT", A: "A TIER — STRONG PICKS", B: "B TIER — SITUATIONAL", C: "C TIER — BEGINNER STAND-INS", D: "D TIER — EARLY GAME ONLY", Watch: "WATCH — PROMISING, UNPROVEN" },
     seeRosterPre: "Want each unit's evolution and materials? Open the ",
     rosterLink: "unit roster",
     seeRosterMid: ". Chasing rewards to level them? Grab the latest ",
@@ -81,7 +81,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     end: ".",
   },
   es: {
-    tierMetaTitle: "Tier List de Anime Expeditions (Septiembre 2026) — Mejores Unidades",
+    tierMetaTitle: "Tier List de Anime Expeditions (Octubre 2026) — Mejores Unidades",
     tierMetaDesc:
       "Las mejores unidades de Anime Expeditions clasificadas de tier S a B por rol — DPS, apoyo, control y AoE — para Historia, Expediciones y raids. Actualizado al meta actual.",
     tierH1: "RANKING DE TIERS",
@@ -97,7 +97,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "BASE",
     role: "ROL",
     evolve: "EVOLUCIÓN",
-    tierLabels: { SS: "TIER SS — LO MÁS ALTO", "S+": "TIER S+ — CASI LO MEJOR", S: "TIER S — LO MEJOR", A: "TIER A — FUERTES", B: "TIER B — SITUACIONALES", Watch: "WATCH — PROMETEDORAS" },
+    tierLabels: { SS: "TIER SS — LO MÁS ALTO", "S+": "TIER S+ — CASI LO MEJOR", S: "TIER S — LO MEJOR", A: "TIER A — FUERTES", B: "TIER B — SITUACIONALES", C: "TIER C — PARA EMPEZAR", D: "TIER D — SOLO AL INICIO", Watch: "WATCH — PROMETEDORAS" },
     seeRosterPre: "¿Quieres la evolución y los materiales de cada unidad? Abre la ",
     rosterLink: "lista de unidades",
     seeRosterMid: ". ¿Buscas recompensas para subirlas? Consigue los últimos ",
@@ -105,7 +105,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     end: ".",
   },
   pt: {
-    tierMetaTitle: "Tier List de Anime Expeditions (Setembro 2026) — Melhores Unidades",
+    tierMetaTitle: "Tier List de Anime Expeditions (Outubro 2026) — Melhores Unidades",
     tierMetaDesc:
       "As melhores unidades de Anime Expeditions classificadas de tier S a B por função — DPS, suporte, controle e AoE — para História, Expedições e raids. Atualizado para o meta atual.",
     tierH1: "RANKING DE TIERS",
@@ -121,7 +121,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "BASE",
     role: "FUNÇÃO",
     evolve: "EVOLUÇÃO",
-    tierLabels: { SS: "TIER SS — O TOPO", "S+": "TIER S+ — QUASE OS MELHORES", S: "TIER S — OS MELHORES", A: "TIER A — FORTES", B: "TIER B — SITUACIONAIS", Watch: "WATCH — PROMISSORAS" },
+    tierLabels: { SS: "TIER SS — O TOPO", "S+": "TIER S+ — QUASE OS MELHORES", S: "TIER S — OS MELHORES", A: "TIER A — FORTES", B: "TIER B — SITUACIONAIS", C: "TIER C — PARA COMEÇAR", D: "TIER D — SÓ NO INÍCIO", Watch: "WATCH — PROMISSORAS" },
     seeRosterPre: "Quer a evolução e os materiais de cada unidade? Abra a ",
     rosterLink: "lista de unidades",
     seeRosterMid: ". Buscando recompensas para upar? Pegue os últimos ",
@@ -129,7 +129,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     end: ".",
   },
   ru: {
-    tierMetaTitle: "Тир-лист Anime Expeditions (сентябрь 2026) — лучшие юниты",
+    tierMetaTitle: "Тир-лист Anime Expeditions (октябрь 2026) — лучшие юниты",
     tierMetaDesc:
       "Лучшие юниты Anime Expeditions по тирам от S до B и по роли — урон, поддержка, контроль, AoE — для Story, Expeditions и рейдов. Актуально для текущей меты.",
     tierH1: "РЕЙТИНГ ТИРОВ",
@@ -145,7 +145,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     base: "БАЗА",
     role: "РОЛЬ",
     evolve: "ЭВОЛЮЦИЯ",
-    tierLabels: { SS: "ТИР SS — ВЕРШИНА МЕТЫ", "S+": "ТИР S+ — ПОЧТИ ЛУЧШИЕ", S: "ТИР S — ЛУЧШИЕ", A: "ТИР A — СИЛЬНЫЕ", B: "ТИР B — СИТУАТИВНЫЕ", Watch: "WATCH — ПЕРСПЕКТИВНЫЕ" },
+    tierLabels: { SS: "ТИР SS — ВЕРШИНА МЕТЫ", "S+": "ТИР S+ — ПОЧТИ ЛУЧШИЕ", S: "ТИР S — ЛУЧШИЕ", A: "ТИР A — СИЛЬНЫЕ", B: "ТИР B — СИТУАТИВНЫЕ", C: "ТИР C — ДЛЯ НОВИЧКОВ", D: "ТИР D — ТОЛЬКО В НАЧАЛЕ", Watch: "WATCH — ПЕРСПЕКТИВНЫЕ" },
     seeRosterPre: "Нужны эволюции и материалы каждого юнита? Откройте ",
     rosterLink: "список юнитов",
     seeRosterMid: ". Нужны награды для прокачки? Берите свежие ",

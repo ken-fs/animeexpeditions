@@ -23,9 +23,9 @@
 
 import type { Locale } from "./i18n";
 
-export const UNITS_VERIFIED = "2026-09-03";
+export const UNITS_VERIFIED = "2026-10-11";
 
-export type Tier = "SS" | "S+" | "S" | "A" | "B" | "Watch";
+export type Tier = "SS" | "S+" | "S" | "A" | "B" | "C" | "D" | "Watch";
 
 export interface Unit {
   name: string; // evolved form shown to players (canonical page name)
@@ -114,7 +114,7 @@ export const units: Unit[] = [
     },
   },
   {
-    name: "8th Sword (Berserker)", base: "8th Sword", tier: "SS",
+    name: "8th Sword (Berserk)", base: "8th Sword", tier: "SS",
     role: "Damage / specialist",
     roleI18n: {
       es: "Daño / especialista",
@@ -379,6 +379,70 @@ export const units: Unit[] = [
     },
     evolveItem: "Holy Pendant",
   },
+  // B Tier (added 2026-10-11 — Beebom's full six-tier table; roles condensed
+  // from the same page's per-unit notes, which is the site's standing source).
+  {
+    name: "Greed", base: "Greed", tier: "B",
+    role: "Boss-only damage bonus (falls off on mob stages)",
+  },
+  {
+    name: "Ice Queen", base: "Ice Queen", tier: "B",
+    role: "Freeze utility + bonus damage on weakened enemies",
+  },
+  {
+    name: "Water Princess", base: "Water Princess", tier: "B",
+    role: "Debuff-blocking shields for nearby allies",
+  },
+  {
+    name: "Scissor", base: "Scissor", tier: "B",
+    role: "Consecutive-hit damage ramp (scales slowly)",
+  },
+  // C Tier — beginner stand-ins, replaced as banners fill out.
+  {
+    name: "Stone Alchemist", base: "Stone Alchemist", tier: "C",
+    role: "Early income farm (outclassed by Ramen Guy)",
+  },
+  {
+    name: "Ice Mage", base: "Ice Mage", tier: "C",
+    role: "Movement slow (early crowd control)",
+  },
+  {
+    name: "Bounty Hunter", base: "Bounty Hunter", tier: "C",
+    role: "Basic damage, no passive",
+  },
+  {
+    name: "Corps Captain", base: "Corps Captain", tier: "C",
+    role: "Steady early attacks (no late scaling)",
+  },
+  {
+    name: "Demon Cyborg", base: "Demon Cyborg", tier: "C",
+    role: "Plain physical DPS (no utility)",
+  },
+  {
+    name: "Nen Hunter", base: "Nen Hunter", tier: "C",
+    role: "Early-story damage filler",
+  },
+  // D Tier — opening-stages only.
+  {
+    name: "Curly Brow", base: "Curly Brow", tier: "D",
+    role: "Earliest-stages basic attacker",
+  },
+  {
+    name: "Kid Assassin", base: "Kid Assassin", tier: "D",
+    role: "Low damage (replace early)",
+  },
+  {
+    name: "Reishi Archer", base: "Reishi Archer", tier: "D",
+    role: "Early placeholder (no scaling)",
+  },
+  {
+    name: "Thunder Shinobi", base: "Thunder Shinobi", tier: "D",
+    role: "Starter damage without scaling",
+  },
+  {
+    name: "Rubber Boy", base: "Rubber Boy", tier: "D",
+    role: "No impactful passive (first to replace)",
+  },
 ];
 
 /** Role line for a unit in the requested locale (falls back to English). */
@@ -386,7 +450,7 @@ export function unitRole(u: Unit, locale: Locale): string {
   return u.roleI18n?.[locale] ?? u.role;
 }
 
-export const TIER_ORDER: Tier[] = ["SS", "S+", "S", "A", "B", "Watch"];
+export const TIER_ORDER: Tier[] = ["SS", "S+", "S", "A", "B", "C", "D", "Watch"];
 
 export const TIER_LABEL: Record<Tier, string> = {
   SS: "SS Tier — top of the meta",
@@ -394,6 +458,8 @@ export const TIER_LABEL: Record<Tier, string> = {
   S: "S Tier — best in slot",
   A: "A Tier — strong picks",
   B: "B Tier — situational",
+  C: "C Tier — beginner stand-ins",
+  D: "D Tier — early game only",
   Watch: "Watch — promising, unproven",
 };
 
@@ -403,6 +469,8 @@ export const TIER_COLOR: Record<Tier, string> = {
   S: "text-accent",
   A: "text-active",
   B: "text-foreground",
+  C: "text-foreground",
+  D: "text-muted",
   Watch: "text-muted",
 };
 
