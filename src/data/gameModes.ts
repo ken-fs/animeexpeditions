@@ -5,7 +5,7 @@
 
 import type { Locale } from "./i18n";
 
-export const MODES_VERIFIED = "2026-09-03";
+export const MODES_VERIFIED = "2026-10-11";
 
 export interface GameMode {
   name: string;
@@ -127,5 +127,25 @@ export const gameModes: GameMode[] = [
       pt: "Uma atividade diária que oferece rerolls com Gold e recompensas de Event Coins. Os objetivos podem ser rerolados com Gold se você tirar alguns que não consegue completar.",
       ru: "Ежедневная активность с рероллами за Gold и наградами Event Coins. Задачи можно рероллить за Gold, если выпали те, что вам не по силам.",
     },
+  },
+  {
+    name: "Boss Rush",
+    unlock: "Update 3.0 (Sep 25, 2026)",
+    summary:
+      "A boss-focused mode added with Update 3.0. Creator coverage confirms it shipped; exact rules, unlock point and rewards are still being documented, so treat planning around it as provisional.",
+  },
+  {
+    name: "Monster Clash",
+    unlock: "Update 3.5 (Oct 7, 2026)",
+    limited: true,
+    summary:
+      "The Update 3.5 event mode: monsters and homunculi push down two crossing lanes and merge into stronger forms at the crossing. Burrowing monsters surface along the way, and clearing the mode can open a Rift - more merged kills, better odds. Runs alongside event quests, an event shop and Alchemist's Chests.",
+  },
+  {
+    name: "Monster Hunt",
+    unlock: "Update 3.5 (Oct 7, 2026)",
+    limited: true,
+    summary:
+      "The hunt event that pairs with Monster Clash: a fresh board of hunts appears every six hours, and each hunt asks you to kill merged monsters of a given rarity. Rarer hunts pay more event currency.",
   },
 ];
