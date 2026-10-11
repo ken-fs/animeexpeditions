@@ -7,7 +7,7 @@
 
 import type { Locale } from "./i18n";
 
-export const UPDATES_VERIFIED = "2026-09-26";
+export const UPDATES_VERIFIED = "2026-10-11";
 
 export interface GameUpdate {
   version: string; // e.g. "Update 1.0"
@@ -19,6 +19,22 @@ export interface GameUpdate {
 }
 
 export const updates: GameUpdate[] = [
+  {
+    version: "Update 3.5",
+    title: "Monster Clash",
+    date: "Released Oct 7, 2026",
+    status: "verified", // official patch notes republished in full (Sportskeeda, Oct 7)
+    highlights: [
+      "Two new units: Subject 8 (Monster) and Alchemy Brothers (Truth) - both are on the units page, unranked until a tier list grades them.",
+      "Monster Clash - a new event mode fought across two crossing lanes: enemies merge into stronger monsters at the crossing, some burrow underground, and clearing the mode can open a Rift (more merged kills, better Rift odds). Comes with event quests, an event shop and Alchemist's Chests.",
+      "Monster Hunt - a new hunt board every six hours: kill merged monsters of each rarity in Monster Clash to complete hunts; rarer hunts pay more event currency.",
+      "The Ancient One - a new world boss every hour with a 10-minute entry window; dodge the marked attacks and hit the weakness, and the kill can drop the Ancient One mount.",
+      "Auto Play learns placement: custom areas instead of path-following, multiple zones per unit slot, min/max placement waves, auto-ability timing, and shareable preset codes.",
+      "New equipment (Blade Arm, Monster Claws) and the Flying Monster mount.",
+      "Three codes shipped with the update - Clash!, Brothers and HollowWorld - all three are on the codes page with their rewards.",
+      "A follow-up build landed Oct 11, 2026 (05:17 UTC); no published notes for it yet, and the code list was re-checked the same day without changes.",
+    ],
+  },
   {
     version: "Update 3.0",
     date: "Released Sep 25, 2026",

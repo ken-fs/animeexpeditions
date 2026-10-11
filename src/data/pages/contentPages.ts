@@ -311,9 +311,9 @@ export const traitsPage: Loc<TraitsStrings> = {
 
 export const updatesPage: Loc<UpdatesStrings> = {
   en: {
-    metaTitle: "Anime Expeditions Updates — Update 3.0 Patch Notes & Events (Sep 2026)",
+    metaTitle: "Anime Expeditions Updates — Update 3.5 Monster Clash Patch Notes (Oct 2026)",
     metaDescription:
-      "Every Anime Expeditions update, newest first — Update 3.0 (Sep 25) with Boss Rush and new units, plus event windows, limited modes, cosmetics and fixes.",
+      "Every Anime Expeditions update, newest first — Update 3.5 Monster Clash (Oct 7) with two new units, the Monster Hunt boards and an hourly world boss, plus event windows, limited modes and fixes.",
     h1: "ANIME EXPEDITIONS UPDATES",
     intro:
       "Every update and event window, newest first — new units, limited modes, cosmetics, and fixes. Event maps like Villain Invasion are time-limited, so check the window before you plan around them.",
@@ -334,7 +334,7 @@ export const updatesPage: Loc<UpdatesStrings> = {
     },
   },
   es: {
-    metaTitle: "Actualizaciones de Anime Expeditions — Update 3.0 y Parches (Sep 2026)",
+    metaTitle: "Actualizaciones de Anime Expeditions — Update 3.5 Monster Clash (Oct 2026)",
     metaDescription:
       "Todas las actualizaciones de Anime Expeditions, de la más nueva a la más vieja — Update 3.0 (25 sep) con Boss Rush y unidades nuevas, más ventanas de eventos, modos limitados, cosméticos y arreglos.",
     h1: "ACTUALIZACIONES DE ANIME EXPEDITIONS",
@@ -357,7 +357,7 @@ export const updatesPage: Loc<UpdatesStrings> = {
     },
   },
   pt: {
-    metaTitle: "Atualizações de Anime Expeditions — Update 3.0 e Patches (Set 2026)",
+    metaTitle: "Atualizações de Anime Expeditions — Update 3.5 Monster Clash (Out 2026)",
     metaDescription:
       "Todas as atualizações de Anime Expeditions, da mais nova à mais antiga — Update 3.0 (25 set) com Boss Rush e unidades novas, além de janelas de eventos, modos limitados, cosméticos e correções.",
     h1: "ATUALIZAÇÕES DE ANIME EXPEDITIONS",
@@ -380,7 +380,7 @@ export const updatesPage: Loc<UpdatesStrings> = {
     },
   },
   ru: {
-    metaTitle: "Обновления Anime Expeditions — Update 3.0 и патчноуты (сен 2026)",
+    metaTitle: "Обновления Anime Expeditions — Update 3.5 Monster Clash (окт 2026)",
     metaDescription:
       "Все обновления Anime Expeditions, от новых к старым — Update 3.0 (25 сен) с Boss Rush и новыми юнитами, а также окна событий, ограниченные режимы, косметика и исправления.",
     h1: "ОБНОВЛЕНИЯ ANIME EXPEDITIONS",

@@ -443,6 +443,17 @@ export const units: Unit[] = [
     name: "Rubber Boy", base: "Rubber Boy", tier: "D",
     role: "No impactful passive (first to replace)",
   },
+  // Watch — shipped with Update 3.5 (Monster Clash, Oct 7 2026) and not yet
+  // graded by any tier list. Listed so the roster is complete; move them up
+  // the ladder when a source ranks them.
+  {
+    name: "Subject 8 (Monster)", base: "Subject 8", tier: "Watch",
+    role: "Update 3.5 unit — role not yet documented by tier lists",
+  },
+  {
+    name: "Alchemy Brothers (Truth)", base: "Alchemy Brothers", tier: "Watch",
+    role: "Update 3.5 unit — role not yet documented by tier lists",
+  },
 ];
 
 /** Role line for a unit in the requested locale (falls back to English). */
