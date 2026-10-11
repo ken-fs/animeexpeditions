@@ -187,7 +187,7 @@ type CodesStrings = {
 
 export const codesPage: Record<Locale, CodesStrings> = {
   en: {
-    metaTitle: "Anime Expeditions Codes (September 2026) — Working Codes & Rewards",
+    metaTitle: "Anime Expeditions Codes (October 2026) — Working Codes & Rewards",
     metaDescription:
       "All working Anime Expeditions codes for Roblox, verified against live sources. Redeem for Trait Crystals, Equipment Rerolls and Stat Rerolls, plus every expired code and how to redeem.",
     titleSub: "★ WORKING CODES ★",

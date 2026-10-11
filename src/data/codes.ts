@@ -16,40 +16,58 @@ export interface GameCode {
 // Watch item: Beebom's expired list also shows `fastrestart!`, a code we have
 // never tracked (TryHardGuides lists it too, but with a stale active list).
 // Verify against a second fresh source before adding it here.
-export const LAST_VERIFIED = "2026-09-26";
-// 2026-09-26: Roblox games API for universeId 7613921865 — 795,232,103 visits;
-// game updated 2026-09-25 20:08 UTC (the update that carried the Update 3 batch).
-export const GAME_VISITS = "795M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
+// 2026-10-11 pull: the Update 3 batch (Bossrush/Hellfire/Update3/RDC26) rotated
+// out — Beebom's expired list and UrGameTips' expired table (17 entries) both
+// carry all four. The new batch is three codes, both sources agree on rewards:
+// Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
+export const LAST_VERIFIED = "2026-10-11";
+// 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
+// game updated 2026-10-09 (the build that carried this batch).
+export const GAME_VISITS = "803M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
 export const NEXT_MILESTONE_HINT =
-  "The Update 3 batch landed Sep 25 (4 codes). Next watch: the 800M-visits milestone (795M now) - the batch-rotation pattern means that milestone should bring the next code batch.";
+  "The 800M-visit milestone has passed (803M) — the batch-rotation pattern means the next code drop is likely tied to a 900M milestone or the next update.";
 
 export const codes: GameCode[] = [
-  // --- Update 3 batch (2026-09-25) ---
-  // Sourcing: Beebom (dateModified 2026-09-26, all four marked NEW) + UrGameTips
-  // (2026-09-25: "we added Bossrush, Update3, RDC26, Hellfire; we moved
-  // restartsorry! to the expired list"). Neither source itemizes rewards yet,
-  // so the reward column stays generic rather than inventing numbers — daily
-  // patrol fills it in when a source publishes the list. Roblox API corroborates
-  // the drop: game updated 2026-09-25 20:08 UTC, visits 775M -> 795M.
+  // --- October batch (2026-10-09) ---
+  // Sourcing: Beebom (all three marked NEW, rewards spelled out) + UrGameTips
+  // (same three, same rewards, in the working table). 2-source rule satisfied.
+  {
+    code: "Clash!",
+    reward: "500x Defense Credit + 50x Trait Crystal",
+    status: "active",
+  },
+  {
+    code: "Brothers",
+    reward: "20x Equipment Reroll + 10x Equipment Lock + 10x Stat Reroll",
+    status: "active",
+  },
+  {
+    code: "HollowWorld",
+    reward: "50x Trait Crystal",
+    status: "active",
+  },
+  // --- Update 3 batch (2026-09-25) — retired 2026-10-11 ---
+  // Sourcing: both Beebom (expired list) and UrGameTips (expired table) carry
+  // all four as expired in the October pull.
   {
     code: "Bossrush",
     reward: "Free rewards",
-    status: "active",
+    status: "expired",
   },
   {
     code: "Hellfire",
     reward: "Free rewards",
-    status: "active",
+    status: "expired",
   },
   {
     code: "Update3",
     reward: "Free rewards",
-    status: "active",
+    status: "expired",
   },
   {
     code: "RDC26",
     reward: "Free rewards",
-    status: "active",
+    status: "expired",
   },
   // --- Eclipse batch (2026-09-10) ---
   // Sourcing: Beebom (full list + rewards, marked NEW) + SuperCheats (partial)
