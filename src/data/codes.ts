@@ -20,7 +20,7 @@ export interface GameCode {
 // out — Beebom's expired list and UrGameTips' expired table (17 entries) both
 // carry all four. The new batch is three codes, both sources agree on rewards:
 // Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
-export const LAST_VERIFIED = "2026-10-27";
+export const LAST_VERIFIED = "2026-10-28";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
 export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
@@ -53,24 +53,22 @@ export const codes: GameCode[] = [
     reward: "50x Trait Crystal",
     status: "active",
   },
-  // --- October batch (2026-10-09) — expiry disputed 2026-10-27 ---
-  // Beebom moved all three to expired on Oct 27, but UrGameTips (Oct 26) and
-  // AllThings.how (Oct 27) still list them as working. Keep them active until
-  // a second source retires them; rewards were previously confirmed by two sources.
+  // --- October batch (2026-10-09) — retired 2026-10-28 ---
+  // Beebom (Oct 27) and UrGameTips (Oct 27) both list all three as expired.
   {
     code: "Clash!",
     reward: "500x Defense Credit + 50x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   {
     code: "Brothers",
     reward: "20x Equipment Reroll + 10x Equipment Lock + 10x Stat Reroll",
-    status: "active",
+    status: "expired",
   },
   {
     code: "HollowWorld",
     reward: "50x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   // --- Update 3 batch (2026-09-25) — retired 2026-10-11 ---
   // Sourcing: both Beebom (expired list) and UrGameTips (expired table) carry
