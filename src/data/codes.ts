@@ -29,10 +29,10 @@ export const NEXT_MILESTONE_HINT =
 
 export const codes: GameCode[] = [
   // --- 2026-10-27 batch ---
-  // Sourcing: Beebom (dateModified 2026-10-27, all four marked NEW with rewards;
-  // Clash!/Brothers/HollowWorld moved to its expired list) + Roblox API (game
-  // updated 2026-10-27 03:06 UTC, same day). UrGameTips (Oct 26) hadn't caught
-  // up yet. Only one aggregator so far - re-check against a second source.
+  // Sourcing: Beebom (dateModified 2026-10-27, all four marked NEW with rewards)
+  // + AllThings.how (updated 2026-10-27, all four in its working list). Roblox
+  // API shows the game updated 2026-10-27 03:06 UTC, same day. UrGameTips and
+  // Destructoid hadn't caught up at check time; the two-source rule is satisfied.
   {
     code: "SorryForDelay",
     reward: "200x Trait Crystal",
@@ -53,23 +53,24 @@ export const codes: GameCode[] = [
     reward: "50x Trait Crystal",
     status: "active",
   },
-  // --- October batch (2026-10-09) — retired 2026-10-27 per Beebom ---
-  // Sourcing: Beebom (all three marked NEW, rewards spelled out) + UrGameTips
-  // (same three, same rewards, in the working table). 2-source rule satisfied.
+  // --- October batch (2026-10-09) — expiry disputed 2026-10-27 ---
+  // Beebom moved all three to expired on Oct 27, but UrGameTips (Oct 26) and
+  // AllThings.how (Oct 27) still list them as working. Keep them active until
+  // a second source retires them; rewards were previously confirmed by two sources.
   {
     code: "Clash!",
     reward: "500x Defense Credit + 50x Trait Crystal",
-    status: "expired",
+    status: "active",
   },
   {
     code: "Brothers",
     reward: "20x Equipment Reroll + 10x Equipment Lock + 10x Stat Reroll",
-    status: "expired",
+    status: "active",
   },
   {
     code: "HollowWorld",
     reward: "50x Trait Crystal",
-    status: "expired",
+    status: "active",
   },
   // --- Update 3 batch (2026-09-25) — retired 2026-10-11 ---
   // Sourcing: both Beebom (expired list) and UrGameTips (expired table) carry
