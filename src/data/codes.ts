@@ -20,31 +20,56 @@ export interface GameCode {
 // out — Beebom's expired list and UrGameTips' expired table (17 entries) both
 // carry all four. The new batch is three codes, both sources agree on rewards:
 // Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
-export const LAST_VERIFIED = "2026-10-11";
+export const LAST_VERIFIED = "2026-10-27";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
-export const GAME_VISITS = "803M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
+export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
 export const NEXT_MILESTONE_HINT =
-  "The 800M-visit milestone has passed (803M) — the batch-rotation pattern means the next code drop is likely tied to a 900M milestone or the next update.";
+  "The 800M-visit milestone has passed (806M) — the batch-rotation pattern means the next code drop is likely tied to a 900M milestone or the next update.";
 
 export const codes: GameCode[] = [
-  // --- October batch (2026-10-09) ---
+  // --- 2026-10-27 batch ---
+  // Sourcing: Beebom (dateModified 2026-10-27, all four marked NEW with rewards;
+  // Clash!/Brothers/HollowWorld moved to its expired list) + Roblox API (game
+  // updated 2026-10-27 03:06 UTC, same day). UrGameTips (Oct 26) hadn't caught
+  // up yet. Only one aggregator so far - re-check against a second source.
+  {
+    code: "SorryForDelay",
+    reward: "200x Trait Crystal",
+    status: "active",
+  },
+  {
+    code: "awakening",
+    reward: "150x Trait Crystal + 20x Equipment Reroll + 10x Equipment Lock + 10x Stat Lock",
+    status: "active",
+  },
+  {
+    code: "breakthelimit",
+    reward: "2,500x Gems + 100x Trait Crystal",
+    status: "active",
+  },
+  {
+    code: "otherside",
+    reward: "50x Trait Crystal",
+    status: "active",
+  },
+  // --- October batch (2026-10-09) — retired 2026-10-27 per Beebom ---
   // Sourcing: Beebom (all three marked NEW, rewards spelled out) + UrGameTips
   // (same three, same rewards, in the working table). 2-source rule satisfied.
   {
     code: "Clash!",
     reward: "500x Defense Credit + 50x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   {
     code: "Brothers",
     reward: "20x Equipment Reroll + 10x Equipment Lock + 10x Stat Reroll",
-    status: "active",
+    status: "expired",
   },
   {
     code: "HollowWorld",
     reward: "50x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   // --- Update 3 batch (2026-09-25) — retired 2026-10-11 ---
   // Sourcing: both Beebom (expired list) and UrGameTips (expired table) carry
