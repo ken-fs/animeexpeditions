@@ -20,7 +20,7 @@ export interface GameCode {
 // out — Beebom's expired list and UrGameTips' expired table (17 entries) both
 // carry all four. The new batch is three codes, both sources agree on rewards:
 // Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
-export const LAST_VERIFIED = "2026-10-28";
+export const LAST_VERIFIED = "2026-10-31";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
 export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
