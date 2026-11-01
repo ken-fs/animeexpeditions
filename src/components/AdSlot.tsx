@@ -16,9 +16,13 @@ export function AdSlot({ unit, className = "" }: { unit: AdUnit; className?: str
   useEffect(() => {
     const box = ref.current;
     if (!box || box.dataset.loaded) return;
-    box.dataset.loaded = "1";
-
-    adQueue = adQueue.then(
+    // Load only once the slot is on screen (or close), 2026-10-31: injecting on mount loaded every unit,
+    // including ones hidden by CSS at this breakpoint: impressions for ads nobody saw. A display:none
+    // element never intersects, so a hidden unit never loads.
+    const load = () => {
+      if (box.dataset.loaded) return;
+      box.dataset.loaded = "1";
+      adQueue = adQueue.then(
       () =>
         new Promise<void>((resolve) => {
           const done = () => resolve();
@@ -39,7 +43,23 @@ export function AdSlot({ unit, className = "" }: { unit: AdUnit; className?: str
           box.appendChild(inline);
           box.appendChild(ext);
         })
+      );
+    };
+    if (!("IntersectionObserver" in window)) {
+      if (box.offsetParent) load();
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          load();
+          io.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" },
     );
+    io.observe(box);
+    return () => io.disconnect();
   }, [unit]);
 
   return (
