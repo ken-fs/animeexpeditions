@@ -20,7 +20,7 @@ export interface GameCode {
 // out — Beebom's expired list and UrGameTips' expired table (17 entries) both
 // carry all four. The new batch is three codes, both sources agree on rewards:
 // Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
-export const LAST_VERIFIED = "2026-10-31";
+export const LAST_VERIFIED = "2026-11-02";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
 export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
@@ -28,7 +28,30 @@ export const NEXT_MILESTONE_HINT =
   "The 800M-visit milestone has passed (806M) — the batch-rotation pattern means the next code drop is likely tied to a 900M milestone or the next update.";
 
 export const codes: GameCode[] = [
+  // --- 2026-11-02 batch (Halloween / Update 5) ---
+  // happyhalloween / levelzero / sevengardens: Beebom (2026-11-02, marked NEW) +
+  // creator live video cmh6TAn4grU (2026-11-01, "three new codes"). Rewards are
+  // from Beebom only (video didn't show amounts). Beebom prints the Equipment
+  // Lock count as "1o" (typo), so that count is left out.
+  // halloweenrestart is Beebom-only so far, so it is NOT added yet.
+  {
+    code: "happyhalloween",
+    reward: "750x Candy Corns + 150x Trait Crystal + 20x Equipment Reroll + Equipment Locks (amount unconfirmed) + 10x Stat Lock",
+    status: "active",
+  },
+  {
+    code: "levelzero",
+    reward: "100x Trait Crystal + 2,500x Gems",
+    status: "active",
+  },
+  {
+    code: "sevengardens",
+    reward: "50x Trait Crystal",
+    status: "active",
+  },
   // --- 2026-10-27 batch ---
+  // 2026-11-02: only Beebom lists these as expired (UrGameTips/Destructoid still
+  // show them active), so the 2-source expiry rule is not met yet. Recheck.
   // Sourcing: Beebom (dateModified 2026-10-27, all four marked NEW with rewards)
   // + AllThings.how (updated 2026-10-27, all four in its working list). Roblox
   // API shows the game updated 2026-10-27 03:06 UTC, same day. UrGameTips and
