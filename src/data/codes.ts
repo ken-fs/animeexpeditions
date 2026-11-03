@@ -20,7 +20,7 @@ export interface GameCode {
 // out — Beebom's expired list and UrGameTips' expired table (17 entries) both
 // carry all four. The new batch is three codes, both sources agree on rewards:
 // Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
-export const LAST_VERIFIED = "2026-11-02";
+export const LAST_VERIFIED = "2026-11-03";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
 export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
@@ -33,7 +33,13 @@ export const codes: GameCode[] = [
   // creator live video cmh6TAn4grU (2026-11-01, "three new codes"). Rewards are
   // from Beebom only (video didn't show amounts). Beebom prints the Equipment
   // Lock count as "1o" (typo), so that count is left out.
-  // halloweenrestart is Beebom-only so far, so it is NOT added yet.
+  // 2026-11-03: halloweenrestart now listed active by Beebom + UrGameTips
+  // (same reward), so it is added at the top.
+  {
+    code: "halloweenrestart",
+    reward: "75x Candy Corns + 50x Trait Crystal",
+    status: "active",
+  },
   {
     code: "happyhalloween",
     reward: "750x Candy Corns + 150x Trait Crystal + 20x Equipment Reroll + Equipment Locks (amount unconfirmed) + 10x Stat Lock",
@@ -50,8 +56,8 @@ export const codes: GameCode[] = [
     status: "active",
   },
   // --- 2026-10-27 batch ---
-  // 2026-11-02: only Beebom lists these as expired (UrGameTips/Destructoid still
-  // show them active), so the 2-source expiry rule is not met yet. Recheck.
+  // 2026-11-03: Beebom + UrGameTips both list all four as expired, so they are
+  // marked expired.
   // Sourcing: Beebom (dateModified 2026-10-27, all four marked NEW with rewards)
   // + AllThings.how (updated 2026-10-27, all four in its working list). Roblox
   // API shows the game updated 2026-10-27 03:06 UTC, same day. UrGameTips and
@@ -59,22 +65,22 @@ export const codes: GameCode[] = [
   {
     code: "SorryForDelay",
     reward: "200x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   {
     code: "awakening",
     reward: "150x Trait Crystal + 20x Equipment Reroll + 10x Equipment Lock + 10x Stat Lock",
-    status: "active",
+    status: "expired",
   },
   {
     code: "breakthelimit",
     reward: "2,500x Gems + 100x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   {
     code: "otherside",
     reward: "50x Trait Crystal",
-    status: "active",
+    status: "expired",
   },
   // --- October batch (2026-10-09) — retired 2026-10-28 ---
   // Beebom (Oct 27) and UrGameTips (Oct 27) both list all three as expired.
