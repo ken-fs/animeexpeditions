@@ -1,3 +1,13 @@
 # Cloudflare's asset uploader skips dot-directories, so the deploy marker ships
 # as /deploy-marker.txt. This rewrite keeps the fleet-standard URL working.
 /.well-known/anvilwiki-deploy.txt  /deploy-marker.txt  200
+
+# The localized homepage is the codes page. Alias /codes without duplicating it.
+/codes  /  301
+/codes/  /  301
+/es/codes  /es/  301
+/es/codes/  /es/  301
+/pt/codes  /pt/  301
+/pt/codes/  /pt/  301
+/ru/codes  /ru/  301
+/ru/codes/  /ru/  301
