@@ -22,7 +22,8 @@ export interface GameCode {
 // Clash! / Brothers / HollowWorld. Watcher found the gap on its first pass.
 // 2026-11-04: Beebom + UrGameTips still list the same four active codes; no change.
 // 2026-11-06: Beebom (modified 11-02), UrGameTips (11-02) and Destructoid (11-05) still list the same four; no change.
-export const LAST_VERIFIED = "2026-11-06";
+// 2026-11-08: Beebom (modified 11-02), UrGameTips (11-06) and Destructoid (11-06) still list the same four active codes; no change.
+export const LAST_VERIFIED = "2026-11-08";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
 export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
