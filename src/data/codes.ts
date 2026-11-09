@@ -23,7 +23,8 @@ export interface GameCode {
 // 2026-11-04: Beebom + UrGameTips still list the same four active codes; no change.
 // 2026-11-06: Beebom (modified 11-02), UrGameTips (11-02) and Destructoid (11-05) still list the same four; no change.
 // 2026-11-08: Beebom (modified 11-02), UrGameTips (11-06) and Destructoid (11-06) still list the same four active codes; no change.
-export const LAST_VERIFIED = "2026-11-08";
+// 2026-11-09: sorryforrestarting added at the top. UrGameTips + Destructoid (re-checked live) both list it active/new with the same reward; patrol report says Beebom does too.
+export const LAST_VERIFIED = "2026-11-09";
 // 2026-10-11: Roblox games API for universeId 7613921865 — 803.8M visits;
 // game updated 2026-10-09 (the build that carried this batch).
 export const GAME_VISITS = "806M+"; // live visits, for milestone context (Roblox API, universeId 7613921865)
@@ -31,6 +32,11 @@ export const NEXT_MILESTONE_HINT =
   "The 800M-visit milestone has passed (806M) — the batch-rotation pattern means the next code drop is likely tied to a 900M milestone or the next update.";
 
 export const codes: GameCode[] = [
+  {
+    code: "sorryforrestarting",
+    reward: "100x Trait Crystal + 2,500x Gems",
+    status: "active",
+  },
   // --- 2026-11-02 batch (Halloween / Update 5) ---
   // happyhalloween / levelzero / sevengardens: Beebom (2026-11-02, marked NEW) +
   // creator live video cmh6TAn4grU (2026-11-01, "three new codes"). Rewards are
