@@ -23,7 +23,7 @@
 
 import type { Locale } from "./i18n";
 
-export const UNITS_VERIFIED = "2026-10-11";
+export const UNITS_VERIFIED = "2026-11-17";
 
 export type Tier = "SS" | "S+" | "S" | "A" | "B" | "C" | "D" | "Watch";
 

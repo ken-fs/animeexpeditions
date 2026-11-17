@@ -7,7 +7,7 @@
 
 import type { Locale } from "./i18n";
 
-export const UPDATES_VERIFIED = "2026-11-04";
+export const UPDATES_VERIFIED = "2026-11-17";
 
 export interface GameUpdate {
   version: string; // e.g. "Update 1.0"
@@ -27,7 +27,7 @@ export const updates: GameUpdate[] = [
     highlights: [
       "A Halloween event is live. The game's Roblox title now carries a pumpkin icon, and the new codes pay out Candy Corns, an event currency.",
       "Four Halloween codes so far: happyhalloween, levelzero, sevengardens and halloweenrestart. Rewards are on the codes page.",
-      "The game's last Roblox update was Nov 4, 2026 (04:54 UTC), at about 812M visits.",
+      "The game's last Roblox update was Nov 14, 2026 (23:39 UTC), at about 819M visits.",
       "Full patch notes aren't published yet, so we're not listing new units or modes. This entry will grow once first-party notes appear.",
     ],
   },
