@@ -3,6 +3,10 @@
 // that's what players in every language community actually call them.
 // AI-translated; recommend a native-speaker pass before heavy promotion.
 
+import { LAST_VERIFIED } from "./codes";
+import { monthYear } from "./month";
+import { UNITS_VERIFIED } from "./units";
+
 export const LOCALES = ["en", "es", "pt", "ru"] as const;
 export type Locale = (typeof LOCALES)[number];
 
@@ -57,7 +61,7 @@ type TierUnitsStrings = {
 
 export const tierUnits: Record<Locale, TierUnitsStrings> = {
   en: {
-    tierMetaTitle: "Anime Expeditions Tier List (October 2026) — Best Units Ranked",
+    tierMetaTitle: `Anime Expeditions Tier List (${monthYear(UNITS_VERIFIED, "en")}) — Best Units Ranked`,
     tierMetaDesc:
       "The best Anime Expeditions units ranked S to B tier by role — DPS, support, control and AoE — for Story, Expeditions and raids. Updated for the current meta.",
     tierH1: "TIER RANKING",
@@ -81,7 +85,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     end: ".",
   },
   es: {
-    tierMetaTitle: "Tier List de Anime Expeditions (Octubre 2026) — Mejores Unidades",
+    tierMetaTitle: `Tier List de Anime Expeditions (${monthYear(UNITS_VERIFIED, "es")}) — Mejores Unidades`,
     tierMetaDesc:
       "Las mejores unidades de Anime Expeditions clasificadas de tier S a B por rol — DPS, apoyo, control y AoE — para Historia, Expediciones y raids. Actualizado al meta actual.",
     tierH1: "RANKING DE TIERS",
@@ -105,7 +109,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     end: ".",
   },
   pt: {
-    tierMetaTitle: "Tier List de Anime Expeditions (Outubro 2026) — Melhores Unidades",
+    tierMetaTitle: `Tier List de Anime Expeditions (${monthYear(UNITS_VERIFIED, "pt")}) — Melhores Unidades`,
     tierMetaDesc:
       "As melhores unidades de Anime Expeditions classificadas de tier S a B por função — DPS, suporte, controle e AoE — para História, Expedições e raids. Atualizado para o meta atual.",
     tierH1: "RANKING DE TIERS",
@@ -129,7 +133,7 @@ export const tierUnits: Record<Locale, TierUnitsStrings> = {
     end: ".",
   },
   ru: {
-    tierMetaTitle: "Тир-лист Anime Expeditions (октябрь 2026) — лучшие юниты",
+    tierMetaTitle: `Тир-лист Anime Expeditions (${monthYear(UNITS_VERIFIED, "ru")}) — лучшие юниты`,
     tierMetaDesc:
       "Лучшие юниты Anime Expeditions по тирам от S до B и по роли — урон, поддержка, контроль, AoE — для Story, Expeditions и рейдов. Актуально для текущей меты.",
     tierH1: "РЕЙТИНГ ТИРОВ",
@@ -187,7 +191,7 @@ type CodesStrings = {
 
 export const codesPage: Record<Locale, CodesStrings> = {
   en: {
-    metaTitle: "Anime Expeditions Codes (October 2026) — Working Codes & Rewards",
+    metaTitle: `Anime Expeditions Codes (${monthYear(LAST_VERIFIED, "en")}) — Working Codes & Rewards`,
     metaDescription:
       "All working Anime Expeditions codes for Roblox, verified against live sources. Redeem for Trait Crystals, Equipment Rerolls and Stat Rerolls, plus every expired code and how to redeem.",
     titleSub: "★ WORKING CODES ★",
@@ -248,7 +252,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
   },
 
   es: {
-    metaTitle: "Códigos de Anime Expeditions (Septiembre 2026) — Códigos Activos y Recompensas",
+    metaTitle: `Códigos de Anime Expeditions (${monthYear(LAST_VERIFIED, "es")}) — Códigos Activos y Recompensas`,
     metaDescription:
       "Todos los códigos activos de Anime Expeditions para Roblox, verificados con fuentes en vivo. Canjéalos por Trait Crystals, Equipment Rerolls y Stat Rerolls, además de códigos caducados y cómo canjearlos.",
     titleSub: "★ CÓDIGOS ACTIVOS ★",
@@ -309,7 +313,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
   },
 
   pt: {
-    metaTitle: "Códigos de Anime Expeditions (Setembro 2026) — Códigos Ativos e Recompensas",
+    metaTitle: `Códigos de Anime Expeditions (${monthYear(LAST_VERIFIED, "pt")}) — Códigos Ativos e Recompensas`,
     metaDescription:
       "Todos os códigos ativos de Anime Expeditions para Roblox, verificados com fontes ao vivo. Resgate por Trait Crystals, Equipment Rerolls e Stat Rerolls, além de códigos expirados e como resgatar.",
     titleSub: "★ CÓDIGOS ATIVOS ★",
@@ -370,7 +374,7 @@ export const codesPage: Record<Locale, CodesStrings> = {
   },
 
   ru: {
-    metaTitle: "Коды Anime Expeditions (сентябрь 2026) — рабочие коды и награды",
+    metaTitle: `Коды Anime Expeditions (${monthYear(LAST_VERIFIED, "ru")}) — рабочие коды и награды`,
     metaDescription:
       "Все рабочие коды Anime Expeditions для Roblox, проверенные по живым источникам. Активируйте ради Trait Crystals, Equipment Rerolls и Stat Rerolls, а также список истёкших кодов и инструкция по активации.",
     titleSub: "★ РАБОЧИЕ КОДЫ ★",
